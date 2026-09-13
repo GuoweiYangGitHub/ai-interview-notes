@@ -35,11 +35,11 @@
         <p>流式交互、评测、可观测性、安全、部署与性能。</p>
         <span class="capability-card__cta">查看专题 →</span>
       </a>
-      <a class="capability-card capability-card--project" href="/课程练习/">
+      <a class="capability-card capability-card--project" href="/E-代码示例/">
         <span class="capability-card__index">04</span>
-        <h3>课程练习</h3>
-        <p>课件案例与 ThingJS RAG 能力对照，用来练方案拆解，不是履历。</p>
-        <span class="capability-card__cta">查看练习 →</span>
+        <h3>代码参考</h3>
+        <p>按专题浏览示例源码，对照笔记里的判断和选型。</p>
+        <span class="capability-card__cta">查看示例 →</span>
       </a>
     </div>
 
@@ -47,8 +47,6 @@
       <a href="/E-代码示例/">代码示例</a>
       <span aria-hidden="true">·</span>
       <a href="/语法对照/">Python / JavaScript 语法对照</a>
-      <span aria-hidden="true">·</span>
-      <a href="/课程练习/">课程练习</a>
     </div>
   </section>
 </template>
