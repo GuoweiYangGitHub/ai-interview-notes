@@ -1,0 +1,276 @@
+[
+  {
+    "text": "代码示例",
+    "link": "/E-代码示例/"
+  },
+  {
+    "text": "Node.js",
+    "collapsed": false,
+    "items": [
+      {
+        "text": "Agent 基础",
+        "collapsed": false,
+        "items": [
+          {
+            "text": "01.定义模型结构化输出",
+            "link": "/E-代码示例/view#examples%2F01.%E5%AE%9A%E4%B9%89%E6%A8%A1%E5%9E%8B%E7%BB%93%E6%9E%84%E5%8C%96%E8%BE%93%E5%87%BA"
+          },
+          {
+            "text": "02.多步流程编排与条件分支",
+            "link": "/E-代码示例/view#examples%2F02.%E5%A4%9A%E6%AD%A5%E6%B5%81%E7%A8%8B%E7%BC%96%E6%8E%92%E4%B8%8E%E6%9D%A1%E4%BB%B6%E5%88%86%E6%94%AF"
+          },
+          {
+            "text": "03.模型规划并调用工具",
+            "link": "/E-代码示例/view#examples%2F03.%E6%A8%A1%E5%9E%8B%E8%A7%84%E5%88%92%E5%B9%B6%E8%B0%83%E7%94%A8%E5%B7%A5%E5%85%B7"
+          },
+          {
+            "text": "04.管理Agent的行动能力-注册、工具池与动态装载",
+            "link": "/E-代码示例/view#examples%2F04.%E7%AE%A1%E7%90%86Agent%E7%9A%84%E8%A1%8C%E5%8A%A8%E8%83%BD%E5%8A%9B-%E6%B3%A8%E5%86%8C%E3%80%81%E5%B7%A5%E5%85%B7%E6%B1%A0%E4%B8%8E%E5%8A%A8%E6%80%81%E8%A3%85%E8%BD%BD"
+          },
+          {
+            "text": "05.MCP协议融入Agent",
+            "link": "/E-代码示例/view#examples%2F05.MCP%E5%8D%8F%E8%AE%AE%E8%9E%8D%E5%85%A5Agent"
+          },
+          {
+            "text": "06.独立的运行环境设计（沙箱）",
+            "link": "/E-代码示例/view#examples%2F06.%E7%8B%AC%E7%AB%8B%E7%9A%84%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83%E8%AE%BE%E8%AE%A1%EF%BC%88%E6%B2%99%E7%AE%B1%EF%BC%89"
+          },
+          {
+            "text": "07.规划转任务，任务转Loop",
+            "link": "/E-代码示例/view#examples%2F07.%E8%A7%84%E5%88%92%E8%BD%AC%E4%BB%BB%E5%8A%A1%EF%BC%8C%E4%BB%BB%E5%8A%A1%E8%BD%ACLoop"
+          }
+        ]
+      },
+      {
+        "text": "平台接入",
+        "collapsed": false,
+        "items": [
+          {
+            "text": "01.Dify API使用",
+            "link": "/E-代码示例/view#exampleAgentFramework%2F01.Dify%20API%E4%BD%BF%E7%94%A8"
+          },
+          {
+            "text": "02.Coze API使用",
+            "link": "/E-代码示例/view#exampleAgentFramework%2F02.Coze%20API%E4%BD%BF%E7%94%A8"
+          },
+          {
+            "text": "03.ralph使用",
+            "link": "/E-代码示例/view#exampleAgentFramework%2F03.ralph%E4%BD%BF%E7%94%A8"
+          }
+        ]
+      },
+      {
+        "text": "知识库工程",
+        "collapsed": false,
+        "items": [
+          {
+            "text": "08.知识库健康度检查",
+            "link": "/E-代码示例/view#exampleAgentFramework%2F08.%E7%9F%A5%E8%AF%86%E5%BA%93%E5%81%A5%E5%BA%B7%E5%BA%A6%E6%A3%80%E6%9F%A5"
+          },
+          {
+            "text": "09.问题生成与BM25检索",
+            "link": "/E-代码示例/view#exampleAgentFramework%2F09.%E9%97%AE%E9%A2%98%E7%94%9F%E6%88%90%E4%B8%8EBM25%E6%A3%80%E7%B4%A2"
+          },
+          {
+            "text": "10.对话知识沉淀",
+            "link": "/E-代码示例/view#exampleAgentFramework%2F10.%E5%AF%B9%E8%AF%9D%E7%9F%A5%E8%AF%86%E6%B2%89%E6%B7%80"
+          },
+          {
+            "text": "11.知识库版本管理",
+            "link": "/E-代码示例/view#exampleAgentFramework%2F11.%E7%9F%A5%E8%AF%86%E5%BA%93%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86"
+          }
+        ]
+      },
+      {
+        "text": "Agent 形态",
+        "collapsed": false,
+        "items": [
+          {
+            "text": "12.反应式智能体",
+            "link": "/E-代码示例/view#exampleAgentFramework%2F12.%E5%8F%8D%E5%BA%94%E5%BC%8F%E6%99%BA%E8%83%BD%E4%BD%93"
+          },
+          {
+            "text": "13.混合式智能体",
+            "link": "/E-代码示例/view#exampleAgentFramework%2F13.%E6%B7%B7%E5%90%88%E5%BC%8F%E6%99%BA%E8%83%BD%E4%BD%93"
+          },
+          {
+            "text": "14.深思熟虑智能体",
+            "link": "/E-代码示例/view#exampleAgentFramework%2F14.%E6%B7%B1%E6%80%9D%E7%86%9F%E8%99%91%E6%99%BA%E8%83%BD%E4%BD%93"
+          }
+        ]
+      },
+      {
+        "text": "框架",
+        "collapsed": false,
+        "items": [
+          {
+            "text": "LangChain Agent（node）",
+            "link": "/E-代码示例/view#exampleAgentFramework%2F15.Langchain%20Agent%2Fnode"
+          },
+          {
+            "text": "textToSql / LangChain",
+            "link": "/E-代码示例/view#exampleAgentFramework%2F04.textToSql%E7%A4%BA%E4%BE%8B%2Flangchain"
+          }
+        ]
+      },
+      {
+        "text": "MCP",
+        "collapsed": false,
+        "items": [
+          {
+            "text": "bing-cn",
+            "link": "/E-代码示例/view#exampleMcpTools%2Fbing-cn"
+          },
+          {
+            "text": "Tavily",
+            "link": "/E-代码示例/view#exampleMcpTools%2FTavily"
+          },
+          {
+            "text": "Tushare",
+            "link": "/E-代码示例/view#exampleMcpTools%2FTushare"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "text": "Python",
+    "collapsed": false,
+    "items": [
+      {
+        "text": "框架",
+        "collapsed": false,
+        "items": [
+          {
+            "text": "LangChain Agent（python）",
+            "link": "/E-代码示例/view#exampleAgentFramework%2F15.Langchain%20Agent%2Fpython"
+          },
+          {
+            "text": "textToSql / Vanna",
+            "link": "/E-代码示例/view#exampleAgentFramework%2F04.textToSql%E7%A4%BA%E4%BE%8B%2Fvanna"
+          },
+          {
+            "text": "16.LlamaIndex",
+            "link": "/E-代码示例/view#exampleAgentFramework%2F16.LlamaIndex"
+          },
+          {
+            "text": "17.Qwen-Agent",
+            "link": "/E-代码示例/view#exampleAgentFramework%2F17.Qwen-Agent"
+          },
+          {
+            "text": "18.AutoGen",
+            "link": "/E-代码示例/view#exampleAgentFramework%2F18.AutoGen"
+          }
+        ]
+      },
+      {
+        "text": "知识库与检索",
+        "collapsed": false,
+        "items": [
+          {
+            "text": "06.Faiss使用",
+            "link": "/E-代码示例/view#exampleAgentFramework%2F06.Faiss%E4%BD%BF%E7%94%A8"
+          },
+          {
+            "text": "07.多模态RAG知识库",
+            "link": "/E-代码示例/view#exampleAgentFramework%2F07.%E5%A4%9A%E6%A8%A1%E6%80%81RAG%E7%9F%A5%E8%AF%86%E5%BA%93"
+          },
+          {
+            "text": "05.Nanobot-ChatBI开发",
+            "link": "/E-代码示例/view#exampleAgentFramework%2F05.Nanobot-ChatBI%E5%BC%80%E5%8F%91"
+          }
+        ]
+      },
+      {
+        "text": "微调",
+        "collapsed": false,
+        "items": [
+          {
+            "text": "01.Alpaca-SFT",
+            "link": "/E-代码示例/view#exampleFineTune%2F01.Alpaca-SFT"
+          },
+          {
+            "text": "02.GRPO-R1",
+            "link": "/E-代码示例/view#exampleFineTune%2F02.GRPO-R1"
+          },
+          {
+            "text": "03.QwenVL微调",
+            "link": "/E-代码示例/view#exampleFineTune%2F03.QwenVL%E5%BE%AE%E8%B0%83"
+          },
+          {
+            "text": "04.效果对比评估",
+            "link": "/E-代码示例/view#exampleFineTune%2F04.%E6%95%88%E6%9E%9C%E5%AF%B9%E6%AF%94%E8%AF%84%E4%BC%B0"
+          }
+        ]
+      },
+      {
+        "text": "多模态",
+        "collapsed": false,
+        "items": [
+          {
+            "text": "01.MinerU使用",
+            "link": "/E-代码示例/view#exampleMultimodal%2F01.MinerU%E4%BD%BF%E7%94%A8"
+          }
+        ]
+      },
+      {
+        "text": "神经网络",
+        "collapsed": false,
+        "items": [
+          {
+            "text": "01.激活函数",
+            "link": "/E-代码示例/view#exampleNeuralNetwork%2F01.%E6%BF%80%E6%B4%BB%E5%87%BD%E6%95%B0"
+          },
+          {
+            "text": "02.NumPy前向传播",
+            "link": "/E-代码示例/view#exampleNeuralNetwork%2F02.NumPy%E5%89%8D%E5%90%91%E4%BC%A0%E6%92%AD"
+          },
+          {
+            "text": "03.NumPy手写训练",
+            "link": "/E-代码示例/view#exampleNeuralNetwork%2F03.NumPy%E6%89%8B%E5%86%99%E8%AE%AD%E7%BB%83"
+          },
+          {
+            "text": "04.Keras最小回归",
+            "link": "/E-代码示例/view#exampleNeuralNetwork%2F04.Keras%E6%9C%80%E5%B0%8F%E5%9B%9E%E5%BD%92"
+          },
+          {
+            "text": "05.CNN卷积演示",
+            "link": "/E-代码示例/view#exampleNeuralNetwork%2F05.CNN%E5%8D%B7%E7%A7%AF%E6%BC%94%E7%A4%BA"
+          },
+          {
+            "text": "06.CNN特征图",
+            "link": "/E-代码示例/view#exampleNeuralNetwork%2F06.CNN%E7%89%B9%E5%BE%81%E5%9B%BE"
+          },
+          {
+            "text": "07.YOLO预测",
+            "link": "/E-代码示例/view#exampleNeuralNetwork%2F07.YOLO%E9%A2%84%E6%B5%8B"
+          },
+          {
+            "text": "08.YOLO训练",
+            "link": "/E-代码示例/view#exampleNeuralNetwork%2F08.YOLO%E8%AE%AD%E7%BB%83"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "text": "资料",
+    "collapsed": false,
+    "items": [
+      {
+        "text": "资料",
+        "collapsed": false,
+        "items": [
+          {
+            "text": "datasets",
+            "link": "/E-代码示例/view#datasets"
+          },
+          {
+            "text": "知识点",
+            "link": "/E-代码示例/view#%E7%9F%A5%E8%AF%86%E7%82%B9"
+          }
+        ]
+      }
+    ]
+  }
+]

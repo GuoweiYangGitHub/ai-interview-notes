@@ -1,0 +1,16 @@
+[
+  {
+    "url": "https://example.com/nvidia-robot-2026",
+    "title": "NVIDIA 2026 机器人进展摘要",
+    "topics": ["NVIDIA", "机器人", "2026"],
+    "excerpt": "官方页面列出 2026 年机器人仿真与世界模型相关进展。",
+    "body": "课程本地样例：NVIDIA 在 2026 年公布了面向机器人训练的仿真更新，强调世界模型用于预测动作后果。发布说明日期为 2026-03-12。来源仅供本示例 browse_page 读取。"
+  },
+  {
+    "url": "https://example.com/agent-tool-calling",
+    "title": "Agent 工具调用责任边界",
+    "topics": ["Agent", "tool calling"],
+    "excerpt": "模型生成命令，宿主决定是否执行。",
+    "body": "课程本地样例：Function Calling 只产生候选命令。搜索是否发生，要看宿主有没有真正调用工具并把 observation 送回。"
+  }
+]

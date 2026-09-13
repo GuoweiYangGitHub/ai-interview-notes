@@ -1,0 +1,53 @@
+schema: spec-driven
+
+context: |
+  Language: zh
+  All artifacts must be written in zh.
+  Keep OpenSpec structural headings and SHALL/MUST keywords in English.
+
+  这是 TypeScript Agent 开发代码示例仓库，不是业务产品。每个 examples/NN.主题/ 目录讲一个可运行的点，代码要能当讲义读。
+
+  Tech stack:
+  - TypeScript（ESM，NodeNext）、tsx 直接跑
+  - openai SDK（OpenAI 兼容协议）+ zod + dotenv
+  - 运行：npm run 01
+
+  模型接入（阿里云百炼 Token Plan）：
+  - Base URL: https://token-plan.cn-beijing.maas.aliyuncs.com/compatible-mode/v1
+  - 默认模型: qwen3.8-flash
+  - API Key 环境变量: BAILIAN_TOKEN_PLAN_API_KEY（sk-sp- 开头）
+  - Token Plan 密钥、地址不可与普通百炼 sk- / dashscope.aliyuncs.com 混用
+  - 密钥、baseURL、模型名只允许在各示例的 client.ts 读取；业务代码只拿 client 和 model
+
+  示例约定:
+  - 目录名：NN.中文主题（两位序号）
+  - 一个主题拆成小模块，每个文件只做一件事
+  - 结构化输出：先 schema（契约），再 client（接入），再 inspect（验收），index 只编排
+  - inspect 失败只报告，不剥 markdown、不改字段、不补 null
+  - 教学注释保留；不要为了“干净”删掉讲义说明
+  - 不要把密钥写进仓库；.env 已 gitignore，只改 .env.example
+
+  OpenSpec 用法:
+  - 新示例或改行为：先 /opsx-propose（或 /openspec-explore），再 /opsx-apply，完成后 /opsx-archive
+  - 规格按能力分：example-layout、model-client、structured-output
+  - 只为即将改动的行为写 delta，不要重写整库规格
+
+rules:
+  proposal:
+    - 写清这个示例要让读者学会什么，以及非目标
+    - 说明影响哪个 examples/NN.主题/ 目录
+  specs:
+    - 需求描述用中文，标题、SHALL/MUST、Scenario 结构保持英文
+    - 每个 requirement 至少带一个 WHEN/THEN 场景
+  tasks:
+    - 按文件拆任务（schema / client / inspect / index）
+    - 不要把“探索代码库”写成实现任务
+
+operations:
+  apply:
+    guidance:
+      - 只改当前 change 点名的示例目录和对应 npm script
+      - 保持教学注释，不要顺手重写成框架代码
+  archive:
+    guidance:
+      - 归档前用一句话说明读者现在能跑通什么

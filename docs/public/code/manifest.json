@@ -1,0 +1,2283 @@
+{
+  "generatedAt": "2026-09-12T07:57:07.665Z",
+  "source": "F:\\agent代码示例",
+  "fileCount": 298,
+  "skippedCount": 35,
+  "groups": [
+    {
+      "id": "node",
+      "title": "Node.js",
+      "collapsed": false,
+      "topics": [
+        {
+          "id": "agent-basics",
+          "title": "Agent 基础",
+          "examples": [
+            {
+              "id": "examples/01.定义模型结构化输出",
+              "title": "01.定义模型结构化输出",
+              "path": "examples/01.定义模型结构化输出",
+              "hasReadme": true,
+              "tree": [
+                {
+                  "type": "file",
+                  "name": "client.ts",
+                  "path": "client.ts",
+                  "lang": "ts"
+                },
+                {
+                  "type": "file",
+                  "name": "index.ts",
+                  "path": "index.ts",
+                  "lang": "ts"
+                },
+                {
+                  "type": "file",
+                  "name": "inspect.ts",
+                  "path": "inspect.ts",
+                  "lang": "ts"
+                },
+                {
+                  "type": "file",
+                  "name": "README.md",
+                  "path": "README.md",
+                  "lang": "md"
+                },
+                {
+                  "type": "file",
+                  "name": "schema.ts",
+                  "path": "schema.ts",
+                  "lang": "ts"
+                }
+              ],
+              "skipped": []
+            },
+            {
+              "id": "examples/02.多步流程编排与条件分支",
+              "title": "02.多步流程编排与条件分支",
+              "path": "examples/02.多步流程编排与条件分支",
+              "hasReadme": true,
+              "tree": [
+                {
+                  "type": "file",
+                  "name": "branch.ts",
+                  "path": "branch.ts",
+                  "lang": "ts"
+                },
+                {
+                  "type": "file",
+                  "name": "client.ts",
+                  "path": "client.ts",
+                  "lang": "ts"
+                },
+                {
+                  "type": "file",
+                  "name": "index.ts",
+                  "path": "index.ts",
+                  "lang": "ts"
+                },
+                {
+                  "type": "file",
+                  "name": "README.md",
+                  "path": "README.md",
+                  "lang": "md"
+                },
+                {
+                  "type": "file",
+                  "name": "schema.ts",
+                  "path": "schema.ts",
+                  "lang": "ts"
+                },
+                {
+                  "type": "file",
+                  "name": "state.ts",
+                  "path": "state.ts",
+                  "lang": "ts"
+                },
+                {
+                  "type": "file",
+                  "name": "steps.ts",
+                  "path": "steps.ts",
+                  "lang": "ts"
+                }
+              ],
+              "skipped": []
+            },
+            {
+              "id": "examples/03.模型规划并调用工具",
+              "title": "03.模型规划并调用工具",
+              "path": "examples/03.模型规划并调用工具",
+              "hasReadme": true,
+              "tree": [
+                {
+                  "type": "dir",
+                  "name": "data",
+                  "children": [
+                    {
+                      "type": "file",
+                      "name": "pages.json",
+                      "path": "data/pages.json",
+                      "lang": "json"
+                    }
+                  ]
+                },
+                {
+                  "type": "file",
+                  "name": "actions.ts",
+                  "path": "actions.ts",
+                  "lang": "ts"
+                },
+                {
+                  "type": "file",
+                  "name": "client.ts",
+                  "path": "client.ts",
+                  "lang": "ts"
+                },
+                {
+                  "type": "file",
+                  "name": "dispatch.ts",
+                  "path": "dispatch.ts",
+                  "lang": "ts"
+                },
+                {
+                  "type": "file",
+                  "name": "index.ts",
+                  "path": "index.ts",
+                  "lang": "ts"
+                },
+                {
+                  "type": "file",
+                  "name": "loop.ts",
+                  "path": "loop.ts",
+                  "lang": "ts"
+                },
+                {
+                  "type": "file",
+                  "name": "README.md",
+                  "path": "README.md",
+                  "lang": "md"
+                },
+                {
+                  "type": "file",
+                  "name": "tools.ts",
+                  "path": "tools.ts",
+                  "lang": "ts"
+                },
+                {
+                  "type": "file",
+                  "name": "zodToJsonSchema.ts",
+                  "path": "zodToJsonSchema.ts",
+                  "lang": "ts"
+                }
+              ],
+              "skipped": []
+            },
+            {
+              "id": "examples/04.管理Agent的行动能力-注册、工具池与动态装载",
+              "title": "04.管理Agent的行动能力-注册、工具池与动态装载",
+              "path": "examples/04.管理Agent的行动能力-注册、工具池与动态装载",
+              "hasReadme": true,
+              "tree": [
+                {
+                  "type": "file",
+                  "name": "catalog.ts",
+                  "path": "catalog.ts",
+                  "lang": "ts"
+                },
+                {
+                  "type": "file",
+                  "name": "client.ts",
+                  "path": "client.ts",
+                  "lang": "ts"
+                },
+                {
+                  "type": "file",
+                  "name": "index.ts",
+                  "path": "index.ts",
+                  "lang": "ts"
+                },
+                {
+                  "type": "file",
+                  "name": "README.md",
+                  "path": "README.md",
+                  "lang": "md"
+                },
+                {
+                  "type": "file",
+                  "name": "registry.ts",
+                  "path": "registry.ts",
+                  "lang": "ts"
+                }
+              ],
+              "skipped": []
+            },
+            {
+              "id": "examples/05.MCP协议融入Agent",
+              "title": "05.MCP协议融入Agent",
+              "path": "examples/05.MCP协议融入Agent",
+              "hasReadme": true,
+              "tree": [
+                {
+                  "type": "dir",
+                  "name": "data",
+                  "children": [
+                    {
+                      "type": "file",
+                      "name": "reports.json",
+                      "path": "data/reports.json",
+                      "lang": "json"
+                    }
+                  ]
+                },
+                {
+                  "type": "file",
+                  "name": "bridge.ts",
+                  "path": "bridge.ts",
+                  "lang": "ts"
+                },
+                {
+                  "type": "file",
+                  "name": "client.ts",
+                  "path": "client.ts",
+                  "lang": "ts"
+                },
+                {
+                  "type": "file",
+                  "name": "index.ts",
+                  "path": "index.ts",
+                  "lang": "ts"
+                },
+                {
+                  "type": "file",
+                  "name": "mcpClient.ts",
+                  "path": "mcpClient.ts",
+                  "lang": "ts"
+                },
+                {
+                  "type": "file",
+                  "name": "README.md",
+                  "path": "README.md",
+                  "lang": "md"
+                },
+                {
+                  "type": "file",
+                  "name": "server.ts",
+                  "path": "server.ts",
+                  "lang": "ts"
+                }
+              ],
+              "skipped": []
+            },
+            {
+              "id": "examples/06.独立的运行环境设计（沙箱）",
+              "title": "06.独立的运行环境设计（沙箱）",
+              "path": "examples/06.独立的运行环境设计（沙箱）",
+              "hasReadme": true,
+              "tree": [
+                {
+                  "type": "dir",
+                  "name": "01.受限进程",
+                  "children": [
+                    {
+                      "type": "file",
+                      "name": "index.ts",
+                      "path": "01.受限进程/index.ts",
+                      "lang": "ts"
+                    },
+                    {
+                      "type": "file",
+                      "name": "restrictedProcess.ts",
+                      "path": "01.受限进程/restrictedProcess.ts",
+                      "lang": "ts"
+                    },
+                    {
+                      "type": "file",
+                      "name": "scheme.ts",
+                      "path": "01.受限进程/scheme.ts",
+                      "lang": "ts"
+                    }
+                  ]
+                },
+                {
+                  "type": "dir",
+                  "name": "02.Docker",
+                  "children": [
+                    {
+                      "type": "file",
+                      "name": "dockerSandbox.ts",
+                      "path": "02.Docker/dockerSandbox.ts",
+                      "lang": "ts"
+                    },
+                    {
+                      "type": "file",
+                      "name": "index.ts",
+                      "path": "02.Docker/index.ts",
+                      "lang": "ts"
+                    },
+                    {
+                      "type": "file",
+                      "name": "scheme.ts",
+                      "path": "02.Docker/scheme.ts",
+                      "lang": "ts"
+                    }
+                  ]
+                },
+                {
+                  "type": "dir",
+                  "name": "03.gVisor",
+                  "children": [
+                    {
+                      "type": "file",
+                      "name": "index.ts",
+                      "path": "03.gVisor/index.ts",
+                      "lang": "ts"
+                    },
+                    {
+                      "type": "file",
+                      "name": "scheme.ts",
+                      "path": "03.gVisor/scheme.ts",
+                      "lang": "ts"
+                    }
+                  ]
+                },
+                {
+                  "type": "dir",
+                  "name": "04.microVM",
+                  "children": [
+                    {
+                      "type": "file",
+                      "name": "index.ts",
+                      "path": "04.microVM/index.ts",
+                      "lang": "ts"
+                    },
+                    {
+                      "type": "file",
+                      "name": "scheme.ts",
+                      "path": "04.microVM/scheme.ts",
+                      "lang": "ts"
+                    }
+                  ]
+                },
+                {
+                  "type": "dir",
+                  "name": "05.托管沙盒",
+                  "children": [
+                    {
+                      "type": "file",
+                      "name": "contract.ts",
+                      "path": "05.托管沙盒/contract.ts",
+                      "lang": "ts"
+                    },
+                    {
+                      "type": "file",
+                      "name": "index.ts",
+                      "path": "05.托管沙盒/index.ts",
+                      "lang": "ts"
+                    },
+                    {
+                      "type": "file",
+                      "name": "scheme.ts",
+                      "path": "05.托管沙盒/scheme.ts",
+                      "lang": "ts"
+                    }
+                  ]
+                },
+                {
+                  "type": "file",
+                  "name": "index.ts",
+                  "path": "index.ts",
+                  "lang": "ts"
+                },
+                {
+                  "type": "file",
+                  "name": "README.md",
+                  "path": "README.md",
+                  "lang": "md"
+                }
+              ],
+              "skipped": []
+            },
+            {
+              "id": "examples/07.规划转任务，任务转Loop",
+              "title": "07.规划转任务，任务转Loop",
+              "path": "examples/07.规划转任务，任务转Loop",
+              "hasReadme": true,
+              "tree": [
+                {
+                  "type": "file",
+                  "name": "board.ts",
+                  "path": "board.ts",
+                  "lang": "ts"
+                },
+                {
+                  "type": "file",
+                  "name": "brief.ts",
+                  "path": "brief.ts",
+                  "lang": "ts"
+                },
+                {
+                  "type": "file",
+                  "name": "client.ts",
+                  "path": "client.ts",
+                  "lang": "ts"
+                },
+                {
+                  "type": "file",
+                  "name": "index.ts",
+                  "path": "index.ts",
+                  "lang": "ts"
+                },
+                {
+                  "type": "file",
+                  "name": "loop.ts",
+                  "path": "loop.ts",
+                  "lang": "ts"
+                },
+                {
+                  "type": "file",
+                  "name": "plan.ts",
+                  "path": "plan.ts",
+                  "lang": "ts"
+                },
+                {
+                  "type": "file",
+                  "name": "README.md",
+                  "path": "README.md",
+                  "lang": "md"
+                }
+              ],
+              "skipped": []
+            }
+          ]
+        },
+        {
+          "id": "platform",
+          "title": "平台接入",
+          "examples": [
+            {
+              "id": "exampleAgentFramework/01.Dify API使用",
+              "title": "01.Dify API使用",
+              "path": "exampleAgentFramework/01.Dify API使用",
+              "hasReadme": true,
+              "tree": [
+                {
+                  "type": "file",
+                  "name": "client.ts",
+                  "path": "client.ts",
+                  "lang": "ts"
+                },
+                {
+                  "type": "file",
+                  "name": "index.ts",
+                  "path": "index.ts",
+                  "lang": "ts"
+                },
+                {
+                  "type": "file",
+                  "name": "README.md",
+                  "path": "README.md",
+                  "lang": "md"
+                }
+              ],
+              "skipped": []
+            },
+            {
+              "id": "exampleAgentFramework/02.Coze API使用",
+              "title": "02.Coze API使用",
+              "path": "exampleAgentFramework/02.Coze API使用",
+              "hasReadme": true,
+              "tree": [
+                {
+                  "type": "file",
+                  "name": "client.ts",
+                  "path": "client.ts",
+                  "lang": "ts"
+                },
+                {
+                  "type": "file",
+                  "name": "index.ts",
+                  "path": "index.ts",
+                  "lang": "ts"
+                },
+                {
+                  "type": "file",
+                  "name": "README.md",
+                  "path": "README.md",
+                  "lang": "md"
+                }
+              ],
+              "skipped": []
+            },
+            {
+              "id": "exampleAgentFramework/03.ralph使用",
+              "title": "03.ralph使用",
+              "path": "exampleAgentFramework/03.ralph使用",
+              "hasReadme": true,
+              "tree": [
+                {
+                  "type": "dir",
+                  "name": "ralph_output",
+                  "children": [
+                    {
+                      "type": "file",
+                      "name": "calc.js",
+                      "path": "ralph_output/calc.js",
+                      "lang": "js"
+                    },
+                    {
+                      "type": "file",
+                      "name": "calc.test.js",
+                      "path": "ralph_output/calc.test.js",
+                      "lang": "js"
+                    },
+                    {
+                      "type": "file",
+                      "name": "package.json",
+                      "path": "ralph_output/package.json",
+                      "lang": "json"
+                    },
+                    {
+                      "type": "file",
+                      "name": "scratchpad.md",
+                      "path": "ralph_output/scratchpad.md",
+                      "lang": "md"
+                    }
+                  ]
+                },
+                {
+                  "type": "file",
+                  "name": "client.ts",
+                  "path": "client.ts",
+                  "lang": "ts"
+                },
+                {
+                  "type": "file",
+                  "name": "harness.ts",
+                  "path": "harness.ts",
+                  "lang": "ts"
+                },
+                {
+                  "type": "file",
+                  "name": "hats.ts",
+                  "path": "hats.ts",
+                  "lang": "ts"
+                },
+                {
+                  "type": "file",
+                  "name": "index.ts",
+                  "path": "index.ts",
+                  "lang": "ts"
+                },
+                {
+                  "type": "file",
+                  "name": "prompt.ts",
+                  "path": "prompt.ts",
+                  "lang": "ts"
+                },
+                {
+                  "type": "file",
+                  "name": "README.md",
+                  "path": "README.md",
+                  "lang": "md"
+                },
+                {
+                  "type": "file",
+                  "name": "scratchpad.ts",
+                  "path": "scratchpad.ts",
+                  "lang": "ts"
+                }
+              ],
+              "skipped": []
+            }
+          ]
+        },
+        {
+          "id": "kb-eng",
+          "title": "知识库工程",
+          "examples": [
+            {
+              "id": "exampleAgentFramework/08.知识库健康度检查",
+              "title": "08.知识库健康度检查",
+              "path": "exampleAgentFramework/08.知识库健康度检查",
+              "hasReadme": true,
+              "tree": [
+                {
+                  "type": "file",
+                  "name": "checker.ts",
+                  "path": "checker.ts",
+                  "lang": "ts"
+                },
+                {
+                  "type": "file",
+                  "name": "client.ts",
+                  "path": "client.ts",
+                  "lang": "ts"
+                },
+                {
+                  "type": "file",
+                  "name": "index.ts",
+                  "path": "index.ts",
+                  "lang": "ts"
+                },
+                {
+                  "type": "file",
+                  "name": "README.md",
+                  "path": "README.md",
+                  "lang": "md"
+                },
+                {
+                  "type": "file",
+                  "name": "sample.ts",
+                  "path": "sample.ts",
+                  "lang": "ts"
+                },
+                {
+                  "type": "file",
+                  "name": "schema.ts",
+                  "path": "schema.ts",
+                  "lang": "ts"
+                }
+              ],
+              "skipped": []
+            },
+            {
+              "id": "exampleAgentFramework/09.问题生成与BM25检索",
+              "title": "09.问题生成与BM25检索",
+              "path": "exampleAgentFramework/09.问题生成与BM25检索",
+              "hasReadme": true,
+              "tree": [
+                {
+                  "type": "file",
+                  "name": "bm25.ts",
+                  "path": "bm25.ts",
+                  "lang": "ts"
+                },
+                {
+                  "type": "file",
+                  "name": "client.ts",
+                  "path": "client.ts",
+                  "lang": "ts"
+                },
+                {
+                  "type": "file",
+                  "name": "generate.ts",
+                  "path": "generate.ts",
+                  "lang": "ts"
+                },
+                {
+                  "type": "file",
+                  "name": "index.ts",
+                  "path": "index.ts",
+                  "lang": "ts"
+                },
+                {
+                  "type": "file",
+                  "name": "README.md",
+                  "path": "README.md",
+                  "lang": "md"
+                },
+                {
+                  "type": "file",
+                  "name": "retrieve.ts",
+                  "path": "retrieve.ts",
+                  "lang": "ts"
+                },
+                {
+                  "type": "file",
+                  "name": "sample.ts",
+                  "path": "sample.ts",
+                  "lang": "ts"
+                },
+                {
+                  "type": "file",
+                  "name": "tokenize.ts",
+                  "path": "tokenize.ts",
+                  "lang": "ts"
+                }
+              ],
+              "skipped": []
+            },
+            {
+              "id": "exampleAgentFramework/10.对话知识沉淀",
+              "title": "10.对话知识沉淀",
+              "path": "exampleAgentFramework/10.对话知识沉淀",
+              "hasReadme": true,
+              "tree": [
+                {
+                  "type": "file",
+                  "name": "client.ts",
+                  "path": "client.ts",
+                  "lang": "ts"
+                },
+                {
+                  "type": "file",
+                  "name": "extract.ts",
+                  "path": "extract.ts",
+                  "lang": "ts"
+                },
+                {
+                  "type": "file",
+                  "name": "index.ts",
+                  "path": "index.ts",
+                  "lang": "ts"
+                },
+                {
+                  "type": "file",
+                  "name": "README.md",
+                  "path": "README.md",
+                  "lang": "md"
+                },
+                {
+                  "type": "file",
+                  "name": "sample.ts",
+                  "path": "sample.ts",
+                  "lang": "ts"
+                },
+                {
+                  "type": "file",
+                  "name": "schema.ts",
+                  "path": "schema.ts",
+                  "lang": "ts"
+                }
+              ],
+              "skipped": []
+            },
+            {
+              "id": "exampleAgentFramework/11.知识库版本管理",
+              "title": "11.知识库版本管理",
+              "path": "exampleAgentFramework/11.知识库版本管理",
+              "hasReadme": true,
+              "tree": [
+                {
+                  "type": "file",
+                  "name": "client.ts",
+                  "path": "client.ts",
+                  "lang": "ts"
+                },
+                {
+                  "type": "file",
+                  "name": "index.ts",
+                  "path": "index.ts",
+                  "lang": "ts"
+                },
+                {
+                  "type": "file",
+                  "name": "README.md",
+                  "path": "README.md",
+                  "lang": "md"
+                },
+                {
+                  "type": "file",
+                  "name": "retrieve.ts",
+                  "path": "retrieve.ts",
+                  "lang": "ts"
+                },
+                {
+                  "type": "file",
+                  "name": "sample.ts",
+                  "path": "sample.ts",
+                  "lang": "ts"
+                },
+                {
+                  "type": "file",
+                  "name": "versions.ts",
+                  "path": "versions.ts",
+                  "lang": "ts"
+                }
+              ],
+              "skipped": []
+            }
+          ]
+        },
+        {
+          "id": "agent-style",
+          "title": "Agent 形态",
+          "examples": [
+            {
+              "id": "exampleAgentFramework/12.反应式智能体",
+              "title": "12.反应式智能体",
+              "path": "exampleAgentFramework/12.反应式智能体",
+              "hasReadme": true,
+              "tree": [
+                {
+                  "type": "file",
+                  "name": "agent.ts",
+                  "path": "agent.ts",
+                  "lang": "ts"
+                },
+                {
+                  "type": "file",
+                  "name": "client.ts",
+                  "path": "client.ts",
+                  "lang": "ts"
+                },
+                {
+                  "type": "file",
+                  "name": "index.ts",
+                  "path": "index.ts",
+                  "lang": "ts"
+                },
+                {
+                  "type": "file",
+                  "name": "README.md",
+                  "path": "README.md",
+                  "lang": "md"
+                },
+                {
+                  "type": "file",
+                  "name": "rules.ts",
+                  "path": "rules.ts",
+                  "lang": "ts"
+                }
+              ],
+              "skipped": []
+            },
+            {
+              "id": "exampleAgentFramework/13.混合式智能体",
+              "title": "13.混合式智能体",
+              "path": "exampleAgentFramework/13.混合式智能体",
+              "hasReadme": true,
+              "tree": [
+                {
+                  "type": "file",
+                  "name": "client.ts",
+                  "path": "client.ts",
+                  "lang": "ts"
+                },
+                {
+                  "type": "file",
+                  "name": "graph.ts",
+                  "path": "graph.ts",
+                  "lang": "ts"
+                },
+                {
+                  "type": "file",
+                  "name": "index.ts",
+                  "path": "index.ts",
+                  "lang": "ts"
+                },
+                {
+                  "type": "file",
+                  "name": "README.md",
+                  "path": "README.md",
+                  "lang": "md"
+                },
+                {
+                  "type": "file",
+                  "name": "sample.ts",
+                  "path": "sample.ts",
+                  "lang": "ts"
+                },
+                {
+                  "type": "file",
+                  "name": "tools.ts",
+                  "path": "tools.ts",
+                  "lang": "ts"
+                }
+              ],
+              "skipped": []
+            },
+            {
+              "id": "exampleAgentFramework/14.深思熟虑智能体",
+              "title": "14.深思熟虑智能体",
+              "path": "exampleAgentFramework/14.深思熟虑智能体",
+              "hasReadme": true,
+              "tree": [
+                {
+                  "type": "file",
+                  "name": "client.ts",
+                  "path": "client.ts",
+                  "lang": "ts"
+                },
+                {
+                  "type": "file",
+                  "name": "graph.ts",
+                  "path": "graph.ts",
+                  "lang": "ts"
+                },
+                {
+                  "type": "file",
+                  "name": "index.ts",
+                  "path": "index.ts",
+                  "lang": "ts"
+                },
+                {
+                  "type": "file",
+                  "name": "README.md",
+                  "path": "README.md",
+                  "lang": "md"
+                },
+                {
+                  "type": "file",
+                  "name": "schema.ts",
+                  "path": "schema.ts",
+                  "lang": "ts"
+                }
+              ],
+              "skipped": []
+            }
+          ]
+        },
+        {
+          "id": "frameworks",
+          "title": "框架",
+          "examples": [
+            {
+              "id": "exampleAgentFramework/15.Langchain Agent/node",
+              "title": "LangChain Agent（node）",
+              "path": "exampleAgentFramework/15.Langchain Agent/node",
+              "hasReadme": false,
+              "tree": [
+                {
+                  "type": "file",
+                  "name": "agent.ts",
+                  "path": "agent.ts",
+                  "lang": "ts"
+                },
+                {
+                  "type": "file",
+                  "name": "client.ts",
+                  "path": "client.ts",
+                  "lang": "ts"
+                },
+                {
+                  "type": "file",
+                  "name": "index.ts",
+                  "path": "index.ts",
+                  "lang": "ts"
+                }
+              ],
+              "skipped": []
+            },
+            {
+              "id": "exampleAgentFramework/04.textToSql示例/langchain",
+              "title": "textToSql / LangChain",
+              "path": "exampleAgentFramework/04.textToSql示例/langchain",
+              "hasReadme": true,
+              "tree": [
+                {
+                  "type": "file",
+                  "name": "agent.ts",
+                  "path": "agent.ts",
+                  "lang": "ts"
+                },
+                {
+                  "type": "file",
+                  "name": "client.ts",
+                  "path": "client.ts",
+                  "lang": "ts"
+                },
+                {
+                  "type": "file",
+                  "name": "index.ts",
+                  "path": "index.ts",
+                  "lang": "ts"
+                },
+                {
+                  "type": "file",
+                  "name": "README.md",
+                  "path": "README.md",
+                  "lang": "md"
+                }
+              ],
+              "skipped": []
+            }
+          ]
+        },
+        {
+          "id": "mcp",
+          "title": "MCP",
+          "examples": [
+            {
+              "id": "exampleMcpTools/bing-cn",
+              "title": "bing-cn",
+              "path": "exampleMcpTools/bing-cn",
+              "hasReadme": true,
+              "tree": [
+                {
+                  "type": "file",
+                  "name": "index.ts",
+                  "path": "index.ts",
+                  "lang": "ts"
+                },
+                {
+                  "type": "file",
+                  "name": "README.md",
+                  "path": "README.md",
+                  "lang": "md"
+                }
+              ],
+              "skipped": []
+            },
+            {
+              "id": "exampleMcpTools/Tavily",
+              "title": "Tavily",
+              "path": "exampleMcpTools/Tavily",
+              "hasReadme": true,
+              "tree": [
+                {
+                  "type": "file",
+                  "name": "client.ts",
+                  "path": "client.ts",
+                  "lang": "ts"
+                },
+                {
+                  "type": "file",
+                  "name": "index.ts",
+                  "path": "index.ts",
+                  "lang": "ts"
+                },
+                {
+                  "type": "file",
+                  "name": "README.md",
+                  "path": "README.md",
+                  "lang": "md"
+                }
+              ],
+              "skipped": []
+            },
+            {
+              "id": "exampleMcpTools/Tushare",
+              "title": "Tushare",
+              "path": "exampleMcpTools/Tushare",
+              "hasReadme": true,
+              "tree": [
+                {
+                  "type": "file",
+                  "name": "client.ts",
+                  "path": "client.ts",
+                  "lang": "ts"
+                },
+                {
+                  "type": "file",
+                  "name": "index.ts",
+                  "path": "index.ts",
+                  "lang": "ts"
+                },
+                {
+                  "type": "file",
+                  "name": "README.md",
+                  "path": "README.md",
+                  "lang": "md"
+                },
+                {
+                  "type": "file",
+                  "name": "requirements.txt",
+                  "path": "requirements.txt",
+                  "lang": "text"
+                },
+                {
+                  "type": "file",
+                  "name": "server.py",
+                  "path": "server.py",
+                  "lang": "python"
+                }
+              ],
+              "skipped": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "python",
+      "title": "Python",
+      "collapsed": false,
+      "topics": [
+        {
+          "id": "frameworks",
+          "title": "框架",
+          "examples": [
+            {
+              "id": "exampleAgentFramework/15.Langchain Agent/python",
+              "title": "LangChain Agent（python）",
+              "path": "exampleAgentFramework/15.Langchain Agent/python",
+              "hasReadme": false,
+              "tree": [
+                {
+                  "type": "file",
+                  "name": "agent.py",
+                  "path": "agent.py",
+                  "lang": "python"
+                },
+                {
+                  "type": "file",
+                  "name": "client.py",
+                  "path": "client.py",
+                  "lang": "python"
+                },
+                {
+                  "type": "file",
+                  "name": "main.py",
+                  "path": "main.py",
+                  "lang": "python"
+                },
+                {
+                  "type": "file",
+                  "name": "requirements.txt",
+                  "path": "requirements.txt",
+                  "lang": "text"
+                }
+              ],
+              "skipped": []
+            },
+            {
+              "id": "exampleAgentFramework/04.textToSql示例/vanna",
+              "title": "textToSql / Vanna",
+              "path": "exampleAgentFramework/04.textToSql示例/vanna",
+              "hasReadme": true,
+              "tree": [
+                {
+                  "type": "file",
+                  "name": "client.py",
+                  "path": "client.py",
+                  "lang": "python"
+                },
+                {
+                  "type": "file",
+                  "name": "db.py",
+                  "path": "db.py",
+                  "lang": "python"
+                },
+                {
+                  "type": "file",
+                  "name": "demo.sqlite",
+                  "path": "demo.sqlite",
+                  "lang": "text"
+                },
+                {
+                  "type": "file",
+                  "name": "main.py",
+                  "path": "main.py",
+                  "lang": "python"
+                },
+                {
+                  "type": "file",
+                  "name": "README.md",
+                  "path": "README.md",
+                  "lang": "md"
+                },
+                {
+                  "type": "file",
+                  "name": "requirements.txt",
+                  "path": "requirements.txt",
+                  "lang": "text"
+                }
+              ],
+              "skipped": []
+            },
+            {
+              "id": "exampleAgentFramework/16.LlamaIndex",
+              "title": "16.LlamaIndex",
+              "path": "exampleAgentFramework/16.LlamaIndex",
+              "hasReadme": true,
+              "tree": [
+                {
+                  "type": "file",
+                  "name": "agent.py",
+                  "path": "agent.py",
+                  "lang": "python"
+                },
+                {
+                  "type": "file",
+                  "name": "client.py",
+                  "path": "client.py",
+                  "lang": "python"
+                },
+                {
+                  "type": "file",
+                  "name": "main.py",
+                  "path": "main.py",
+                  "lang": "python"
+                },
+                {
+                  "type": "file",
+                  "name": "README.md",
+                  "path": "README.md",
+                  "lang": "md"
+                },
+                {
+                  "type": "file",
+                  "name": "requirements.txt",
+                  "path": "requirements.txt",
+                  "lang": "text"
+                }
+              ],
+              "skipped": []
+            },
+            {
+              "id": "exampleAgentFramework/17.Qwen-Agent",
+              "title": "17.Qwen-Agent",
+              "path": "exampleAgentFramework/17.Qwen-Agent",
+              "hasReadme": true,
+              "tree": [
+                {
+                  "type": "file",
+                  "name": "agent.py",
+                  "path": "agent.py",
+                  "lang": "python"
+                },
+                {
+                  "type": "file",
+                  "name": "client.py",
+                  "path": "client.py",
+                  "lang": "python"
+                },
+                {
+                  "type": "file",
+                  "name": "main.py",
+                  "path": "main.py",
+                  "lang": "python"
+                },
+                {
+                  "type": "file",
+                  "name": "README.md",
+                  "path": "README.md",
+                  "lang": "md"
+                },
+                {
+                  "type": "file",
+                  "name": "requirements.txt",
+                  "path": "requirements.txt",
+                  "lang": "text"
+                }
+              ],
+              "skipped": []
+            },
+            {
+              "id": "exampleAgentFramework/18.AutoGen",
+              "title": "18.AutoGen",
+              "path": "exampleAgentFramework/18.AutoGen",
+              "hasReadme": true,
+              "tree": [
+                {
+                  "type": "file",
+                  "name": "agent.py",
+                  "path": "agent.py",
+                  "lang": "python"
+                },
+                {
+                  "type": "file",
+                  "name": "client.py",
+                  "path": "client.py",
+                  "lang": "python"
+                },
+                {
+                  "type": "file",
+                  "name": "main.py",
+                  "path": "main.py",
+                  "lang": "python"
+                },
+                {
+                  "type": "file",
+                  "name": "README.md",
+                  "path": "README.md",
+                  "lang": "md"
+                },
+                {
+                  "type": "file",
+                  "name": "requirements.txt",
+                  "path": "requirements.txt",
+                  "lang": "text"
+                }
+              ],
+              "skipped": []
+            }
+          ]
+        },
+        {
+          "id": "kb-search",
+          "title": "知识库与检索",
+          "examples": [
+            {
+              "id": "exampleAgentFramework/06.Faiss使用",
+              "title": "06.Faiss使用",
+              "path": "exampleAgentFramework/06.Faiss使用",
+              "hasReadme": true,
+              "tree": [
+                {
+                  "type": "dir",
+                  "name": "vector_db",
+                  "children": [
+                    {
+                      "type": "file",
+                      "name": "index.faiss",
+                      "path": "vector_db/index.faiss",
+                      "lang": "text"
+                    },
+                    {
+                      "type": "file",
+                      "name": "index.pkl",
+                      "path": "vector_db/index.pkl",
+                      "lang": "text"
+                    }
+                  ]
+                },
+                {
+                  "type": "file",
+                  "name": "client.py",
+                  "path": "client.py",
+                  "lang": "python"
+                },
+                {
+                  "type": "file",
+                  "name": "ingest.py",
+                  "path": "ingest.py",
+                  "lang": "python"
+                },
+                {
+                  "type": "file",
+                  "name": "main.py",
+                  "path": "main.py",
+                  "lang": "python"
+                },
+                {
+                  "type": "file",
+                  "name": "README.md",
+                  "path": "README.md",
+                  "lang": "md"
+                },
+                {
+                  "type": "file",
+                  "name": "requirements.txt",
+                  "path": "requirements.txt",
+                  "lang": "text"
+                },
+                {
+                  "type": "file",
+                  "name": "sample.txt",
+                  "path": "sample.txt",
+                  "lang": "text"
+                },
+                {
+                  "type": "file",
+                  "name": "store.py",
+                  "path": "store.py",
+                  "lang": "python"
+                }
+              ],
+              "skipped": []
+            },
+            {
+              "id": "exampleAgentFramework/07.多模态RAG知识库",
+              "title": "07.多模态RAG知识库",
+              "path": "exampleAgentFramework/07.多模态RAG知识库",
+              "hasReadme": true,
+              "tree": [
+                {
+                  "type": "dir",
+                  "name": "knowledge",
+                  "children": [
+                    {
+                      "type": "dir",
+                      "name": "docs",
+                      "children": [
+                        {
+                          "type": "file",
+                          "name": "节庆活动.docx",
+                          "path": "knowledge/docs/节庆活动.docx",
+                          "lang": "text"
+                        },
+                        {
+                          "type": "file",
+                          "name": "门票与退改.docx",
+                          "path": "knowledge/docs/门票与退改.docx",
+                          "lang": "text"
+                        },
+                        {
+                          "type": "file",
+                          "name": "停车与剐蹭.docx",
+                          "path": "knowledge/docs/停车与剐蹭.docx",
+                          "lang": "text"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "file",
+                      "name": "videos.json",
+                      "path": "knowledge/videos.json",
+                      "lang": "json"
+                    }
+                  ]
+                },
+                {
+                  "type": "dir",
+                  "name": "vector_db",
+                  "children": [
+                    {
+                      "type": "file",
+                      "name": "index.faiss",
+                      "path": "vector_db/index.faiss",
+                      "lang": "text"
+                    },
+                    {
+                      "type": "file",
+                      "name": "metadata.json",
+                      "path": "vector_db/metadata.json",
+                      "lang": "json"
+                    }
+                  ]
+                },
+                {
+                  "type": "file",
+                  "name": "build_index.py",
+                  "path": "build_index.py",
+                  "lang": "python"
+                },
+                {
+                  "type": "file",
+                  "name": "client.py",
+                  "path": "client.py",
+                  "lang": "python"
+                },
+                {
+                  "type": "file",
+                  "name": "embed.py",
+                  "path": "embed.py",
+                  "lang": "python"
+                },
+                {
+                  "type": "file",
+                  "name": "ingest.py",
+                  "path": "ingest.py",
+                  "lang": "python"
+                },
+                {
+                  "type": "file",
+                  "name": "main.py",
+                  "path": "main.py",
+                  "lang": "python"
+                },
+                {
+                  "type": "file",
+                  "name": "query.py",
+                  "path": "query.py",
+                  "lang": "python"
+                },
+                {
+                  "type": "file",
+                  "name": "README.md",
+                  "path": "README.md",
+                  "lang": "md"
+                },
+                {
+                  "type": "file",
+                  "name": "requirements.txt",
+                  "path": "requirements.txt",
+                  "lang": "text"
+                },
+                {
+                  "type": "file",
+                  "name": "store.py",
+                  "path": "store.py",
+                  "lang": "python"
+                }
+              ],
+              "skipped": [
+                "knowledge/images/奇妙聚会海报.png",
+                "knowledge/images/万圣节海报.png"
+              ]
+            },
+            {
+              "id": "exampleAgentFramework/05.Nanobot-ChatBI开发",
+              "title": "05.Nanobot-ChatBI开发",
+              "path": "exampleAgentFramework/05.Nanobot-ChatBI开发",
+              "hasReadme": true,
+              "tree": [
+                {
+                  "type": "dir",
+                  "name": "lib",
+                  "children": [
+                    {
+                      "type": "file",
+                      "name": "__init__.py",
+                      "path": "lib/__init__.py",
+                      "lang": "python"
+                    },
+                    {
+                      "type": "file",
+                      "name": "arima_predict.py",
+                      "path": "lib/arima_predict.py",
+                      "lang": "python"
+                    },
+                    {
+                      "type": "file",
+                      "name": "bollinger_core.py",
+                      "path": "lib/bollinger_core.py",
+                      "lang": "python"
+                    },
+                    {
+                      "type": "file",
+                      "name": "macd_analysis.py",
+                      "path": "lib/macd_analysis.py",
+                      "lang": "python"
+                    },
+                    {
+                      "type": "file",
+                      "name": "paths.py",
+                      "path": "lib/paths.py",
+                      "lang": "python"
+                    },
+                    {
+                      "type": "file",
+                      "name": "prophet_core.py",
+                      "path": "lib/prophet_core.py",
+                      "lang": "python"
+                    },
+                    {
+                      "type": "file",
+                      "name": "sql_chart.py",
+                      "path": "lib/sql_chart.py",
+                      "lang": "python"
+                    }
+                  ]
+                },
+                {
+                  "type": "dir",
+                  "name": "memory",
+                  "children": [
+                    {
+                      "type": "file",
+                      "name": "MEMORY.md",
+                      "path": "memory/MEMORY.md",
+                      "lang": "md"
+                    }
+                  ]
+                },
+                {
+                  "type": "dir",
+                  "name": "sessions",
+                  "children": [
+                    {
+                      "type": "file",
+                      "name": "Y2hhdGJpOm9uZXNob3Q.jsonl",
+                      "path": "sessions/Y2hhdGJpOm9uZXNob3Q.jsonl",
+                      "lang": "json"
+                    }
+                  ]
+                },
+                {
+                  "type": "dir",
+                  "name": "skills",
+                  "children": [
+                    {
+                      "type": "dir",
+                      "name": "arima-predict",
+                      "children": [
+                        {
+                          "type": "dir",
+                          "name": "scripts",
+                          "children": [
+                            {
+                              "type": "file",
+                              "name": "run_arima.py",
+                              "path": "skills/arima-predict/scripts/run_arima.py",
+                              "lang": "python"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "file",
+                          "name": "SKILL.md",
+                          "path": "skills/arima-predict/SKILL.md",
+                          "lang": "md"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "dir",
+                      "name": "bollinger",
+                      "children": [
+                        {
+                          "type": "dir",
+                          "name": "scripts",
+                          "children": [
+                            {
+                              "type": "file",
+                              "name": "run_bollinger.py",
+                              "path": "skills/bollinger/scripts/run_bollinger.py",
+                              "lang": "python"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "file",
+                          "name": "SKILL.md",
+                          "path": "skills/bollinger/SKILL.md",
+                          "lang": "md"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "dir",
+                      "name": "macd-analysis",
+                      "children": [
+                        {
+                          "type": "dir",
+                          "name": "scripts",
+                          "children": [
+                            {
+                              "type": "file",
+                              "name": "run_macd.py",
+                              "path": "skills/macd-analysis/scripts/run_macd.py",
+                              "lang": "python"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "file",
+                          "name": "SKILL.md",
+                          "path": "skills/macd-analysis/SKILL.md",
+                          "lang": "md"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "dir",
+                      "name": "prophet-cycle",
+                      "children": [
+                        {
+                          "type": "dir",
+                          "name": "scripts",
+                          "children": [
+                            {
+                              "type": "file",
+                              "name": "run_prophet.py",
+                              "path": "skills/prophet-cycle/scripts/run_prophet.py",
+                              "lang": "python"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "file",
+                          "name": "SKILL.md",
+                          "path": "skills/prophet-cycle/SKILL.md",
+                          "lang": "md"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "dir",
+                      "name": "stock-sql",
+                      "children": [
+                        {
+                          "type": "dir",
+                          "name": "scripts",
+                          "children": [
+                            {
+                              "type": "file",
+                              "name": "run_sql.py",
+                              "path": "skills/stock-sql/scripts/run_sql.py",
+                              "lang": "python"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "file",
+                          "name": "SKILL.md",
+                          "path": "skills/stock-sql/SKILL.md",
+                          "lang": "md"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "file",
+                  "name": ".runtime-config.json",
+                  "path": ".runtime-config.json",
+                  "lang": "json"
+                },
+                {
+                  "type": "file",
+                  "name": "agent.py",
+                  "path": "agent.py",
+                  "lang": "python"
+                },
+                {
+                  "type": "file",
+                  "name": "AGENTS.md",
+                  "path": "AGENTS.md",
+                  "lang": "md"
+                },
+                {
+                  "type": "file",
+                  "name": "client.py",
+                  "path": "client.py",
+                  "lang": "python"
+                },
+                {
+                  "type": "file",
+                  "name": "config.json",
+                  "path": "config.json",
+                  "lang": "json"
+                },
+                {
+                  "type": "file",
+                  "name": "faq.txt",
+                  "path": "faq.txt",
+                  "lang": "text"
+                },
+                {
+                  "type": "file",
+                  "name": "README.md",
+                  "path": "README.md",
+                  "lang": "md"
+                },
+                {
+                  "type": "file",
+                  "name": "requirements.txt",
+                  "path": "requirements.txt",
+                  "lang": "text"
+                },
+                {
+                  "type": "file",
+                  "name": "run.cjs",
+                  "path": "run.cjs",
+                  "lang": "js"
+                },
+                {
+                  "type": "file",
+                  "name": "seed_db.py",
+                  "path": "seed_db.py",
+                  "lang": "python"
+                },
+                {
+                  "type": "file",
+                  "name": "web.py",
+                  "path": "web.py",
+                  "lang": "python"
+                }
+              ],
+              "skipped": [
+                "charts/arima_600519.SH_1788859248379.png",
+                "charts/chart_1788859218020.png",
+                "stock_data.db"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "finetune",
+          "title": "微调",
+          "examples": [
+            {
+              "id": "exampleFineTune/01.Alpaca-SFT",
+              "title": "01.Alpaca-SFT",
+              "path": "exampleFineTune/01.Alpaca-SFT",
+              "hasReadme": true,
+              "tree": [
+                {
+                  "type": "file",
+                  "name": "main.py",
+                  "path": "main.py",
+                  "lang": "python"
+                },
+                {
+                  "type": "file",
+                  "name": "README.md",
+                  "path": "README.md",
+                  "lang": "md"
+                }
+              ],
+              "skipped": []
+            },
+            {
+              "id": "exampleFineTune/02.GRPO-R1",
+              "title": "02.GRPO-R1",
+              "path": "exampleFineTune/02.GRPO-R1",
+              "hasReadme": true,
+              "tree": [
+                {
+                  "type": "file",
+                  "name": "main.py",
+                  "path": "main.py",
+                  "lang": "python"
+                },
+                {
+                  "type": "file",
+                  "name": "README.md",
+                  "path": "README.md",
+                  "lang": "md"
+                }
+              ],
+              "skipped": []
+            },
+            {
+              "id": "exampleFineTune/03.QwenVL微调",
+              "title": "03.QwenVL微调",
+              "path": "exampleFineTune/03.QwenVL微调",
+              "hasReadme": true,
+              "tree": [
+                {
+                  "type": "file",
+                  "name": "main.py",
+                  "path": "main.py",
+                  "lang": "python"
+                },
+                {
+                  "type": "file",
+                  "name": "qwen-vl-train.xlsx",
+                  "path": "qwen-vl-train.xlsx",
+                  "lang": "text"
+                },
+                {
+                  "type": "file",
+                  "name": "README.md",
+                  "path": "README.md",
+                  "lang": "md"
+                }
+              ],
+              "skipped": [
+                "images/1-vehicle-odometer-reading.jpg",
+                "images/2-vehicle-odometer-reading.jpg"
+              ]
+            },
+            {
+              "id": "exampleFineTune/04.效果对比评估",
+              "title": "04.效果对比评估",
+              "path": "exampleFineTune/04.效果对比评估",
+              "hasReadme": true,
+              "tree": [
+                {
+                  "type": "file",
+                  "name": "main.py",
+                  "path": "main.py",
+                  "lang": "python"
+                },
+                {
+                  "type": "file",
+                  "name": "README.md",
+                  "path": "README.md",
+                  "lang": "md"
+                }
+              ],
+              "skipped": []
+            }
+          ]
+        },
+        {
+          "id": "multimodal",
+          "title": "多模态",
+          "examples": [
+            {
+              "id": "exampleMultimodal/01.MinerU使用",
+              "title": "01.MinerU使用",
+              "path": "exampleMultimodal/01.MinerU使用",
+              "hasReadme": true,
+              "tree": [
+                {
+                  "type": "file",
+                  "name": "download_models.py",
+                  "path": "download_models.py",
+                  "lang": "python"
+                },
+                {
+                  "type": "file",
+                  "name": "main.py",
+                  "path": "main.py",
+                  "lang": "python"
+                },
+                {
+                  "type": "file",
+                  "name": "make_sample_pdf.py",
+                  "path": "make_sample_pdf.py",
+                  "lang": "python"
+                },
+                {
+                  "type": "file",
+                  "name": "README.md",
+                  "path": "README.md",
+                  "lang": "md"
+                },
+                {
+                  "type": "file",
+                  "name": "requirements.txt",
+                  "path": "requirements.txt",
+                  "lang": "text"
+                }
+              ],
+              "skipped": [
+                "sample.pdf"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "nn",
+          "title": "神经网络",
+          "examples": [
+            {
+              "id": "exampleNeuralNetwork/01.激活函数",
+              "title": "01.激活函数",
+              "path": "exampleNeuralNetwork/01.激活函数",
+              "hasReadme": true,
+              "tree": [
+                {
+                  "type": "file",
+                  "name": "main.py",
+                  "path": "main.py",
+                  "lang": "python"
+                },
+                {
+                  "type": "file",
+                  "name": "README.md",
+                  "path": "README.md",
+                  "lang": "md"
+                }
+              ],
+              "skipped": []
+            },
+            {
+              "id": "exampleNeuralNetwork/02.NumPy前向传播",
+              "title": "02.NumPy前向传播",
+              "path": "exampleNeuralNetwork/02.NumPy前向传播",
+              "hasReadme": true,
+              "tree": [
+                {
+                  "type": "file",
+                  "name": "main.py",
+                  "path": "main.py",
+                  "lang": "python"
+                },
+                {
+                  "type": "file",
+                  "name": "README.md",
+                  "path": "README.md",
+                  "lang": "md"
+                }
+              ],
+              "skipped": []
+            },
+            {
+              "id": "exampleNeuralNetwork/03.NumPy手写训练",
+              "title": "03.NumPy手写训练",
+              "path": "exampleNeuralNetwork/03.NumPy手写训练",
+              "hasReadme": true,
+              "tree": [
+                {
+                  "type": "file",
+                  "name": "main.py",
+                  "path": "main.py",
+                  "lang": "python"
+                },
+                {
+                  "type": "file",
+                  "name": "README.md",
+                  "path": "README.md",
+                  "lang": "md"
+                }
+              ],
+              "skipped": []
+            },
+            {
+              "id": "exampleNeuralNetwork/04.Keras最小回归",
+              "title": "04.Keras最小回归",
+              "path": "exampleNeuralNetwork/04.Keras最小回归",
+              "hasReadme": true,
+              "tree": [
+                {
+                  "type": "file",
+                  "name": "main.py",
+                  "path": "main.py",
+                  "lang": "python"
+                },
+                {
+                  "type": "file",
+                  "name": "README.md",
+                  "path": "README.md",
+                  "lang": "md"
+                }
+              ],
+              "skipped": []
+            },
+            {
+              "id": "exampleNeuralNetwork/05.CNN卷积演示",
+              "title": "05.CNN卷积演示",
+              "path": "exampleNeuralNetwork/05.CNN卷积演示",
+              "hasReadme": true,
+              "tree": [
+                {
+                  "type": "file",
+                  "name": "main.py",
+                  "path": "main.py",
+                  "lang": "python"
+                },
+                {
+                  "type": "file",
+                  "name": "README.md",
+                  "path": "README.md",
+                  "lang": "md"
+                }
+              ],
+              "skipped": []
+            },
+            {
+              "id": "exampleNeuralNetwork/06.CNN特征图",
+              "title": "06.CNN特征图",
+              "path": "exampleNeuralNetwork/06.CNN特征图",
+              "hasReadme": true,
+              "tree": [
+                {
+                  "type": "file",
+                  "name": "main.py",
+                  "path": "main.py",
+                  "lang": "python"
+                },
+                {
+                  "type": "file",
+                  "name": "README.md",
+                  "path": "README.md",
+                  "lang": "md"
+                }
+              ],
+              "skipped": [
+                "out/conv.png",
+                "out/input.png",
+                "out/pool.png",
+                "out/relu.png"
+              ]
+            },
+            {
+              "id": "exampleNeuralNetwork/07.YOLO预测",
+              "title": "07.YOLO预测",
+              "path": "exampleNeuralNetwork/07.YOLO预测",
+              "hasReadme": true,
+              "tree": [
+                {
+                  "type": "file",
+                  "name": "main.py",
+                  "path": "main.py",
+                  "lang": "python"
+                },
+                {
+                  "type": "file",
+                  "name": "README.md",
+                  "path": "README.md",
+                  "lang": "md"
+                }
+              ],
+              "skipped": [
+                "out/predict/sample.jpg",
+                "sample.jpg"
+              ]
+            },
+            {
+              "id": "exampleNeuralNetwork/08.YOLO训练",
+              "title": "08.YOLO训练",
+              "path": "exampleNeuralNetwork/08.YOLO训练",
+              "hasReadme": true,
+              "tree": [
+                {
+                  "type": "dir",
+                  "name": "runs",
+                  "children": [
+                    {
+                      "type": "dir",
+                      "name": "detect",
+                      "children": [
+                        {
+                          "type": "file",
+                          "name": "args.yaml",
+                          "path": "runs/detect/args.yaml",
+                          "lang": "yaml"
+                        },
+                        {
+                          "type": "file",
+                          "name": "results.csv",
+                          "path": "runs/detect/results.csv",
+                          "lang": "text"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "file",
+                  "name": "main.py",
+                  "path": "main.py",
+                  "lang": "python"
+                },
+                {
+                  "type": "file",
+                  "name": "README.md",
+                  "path": "README.md",
+                  "lang": "md"
+                }
+              ],
+              "skipped": [
+                "runs/detect/BoxF1_curve.png",
+                "runs/detect/BoxP_curve.png",
+                "runs/detect/BoxPR_curve.png",
+                "runs/detect/BoxR_curve.png",
+                "runs/detect/confusion_matrix_normalized.png",
+                "runs/detect/confusion_matrix.png",
+                "runs/detect/labels.jpg",
+                "runs/detect/results.png",
+                "runs/detect/train_batch0.jpg",
+                "runs/detect/val_batch0_labels.jpg",
+                "runs/detect/val_batch0_pred.jpg",
+                "runs/detect/weights/best.pt",
+                "runs/detect/weights/last.pt"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "extras",
+      "title": "资料",
+      "collapsed": true,
+      "topics": [
+        {
+          "id": "refs",
+          "title": "资料",
+          "examples": [
+            {
+              "id": "datasets",
+              "title": "datasets",
+              "path": "datasets",
+              "hasReadme": false,
+              "tree": [
+                {
+                  "type": "dir",
+                  "name": "coco8",
+                  "children": [
+                    {
+                      "type": "dir",
+                      "name": "labels",
+                      "children": [
+                        {
+                          "type": "dir",
+                          "name": "train",
+                          "children": [
+                            {
+                              "type": "file",
+                              "name": "000000000009.txt",
+                              "path": "coco8/labels/train/000000000009.txt",
+                              "lang": "text"
+                            },
+                            {
+                              "type": "file",
+                              "name": "000000000025.txt",
+                              "path": "coco8/labels/train/000000000025.txt",
+                              "lang": "text"
+                            },
+                            {
+                              "type": "file",
+                              "name": "000000000030.txt",
+                              "path": "coco8/labels/train/000000000030.txt",
+                              "lang": "text"
+                            },
+                            {
+                              "type": "file",
+                              "name": "000000000034.txt",
+                              "path": "coco8/labels/train/000000000034.txt",
+                              "lang": "text"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "dir",
+                          "name": "val",
+                          "children": [
+                            {
+                              "type": "file",
+                              "name": "000000000036.txt",
+                              "path": "coco8/labels/val/000000000036.txt",
+                              "lang": "text"
+                            },
+                            {
+                              "type": "file",
+                              "name": "000000000042.txt",
+                              "path": "coco8/labels/val/000000000042.txt",
+                              "lang": "text"
+                            },
+                            {
+                              "type": "file",
+                              "name": "000000000049.txt",
+                              "path": "coco8/labels/val/000000000049.txt",
+                              "lang": "text"
+                            },
+                            {
+                              "type": "file",
+                              "name": "000000000061.txt",
+                              "path": "coco8/labels/val/000000000061.txt",
+                              "lang": "text"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "file",
+                          "name": "train.cache",
+                          "path": "coco8/labels/train.cache",
+                          "lang": "text"
+                        },
+                        {
+                          "type": "file",
+                          "name": "val.cache",
+                          "path": "coco8/labels/val.cache",
+                          "lang": "text"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "file",
+                      "name": "LICENSE",
+                      "path": "coco8/LICENSE",
+                      "lang": "text"
+                    },
+                    {
+                      "type": "file",
+                      "name": "README.md",
+                      "path": "coco8/README.md",
+                      "lang": "md"
+                    }
+                  ]
+                }
+              ],
+              "skipped": [
+                "coco8/images/train/000000000009.jpg",
+                "coco8/images/train/000000000025.jpg",
+                "coco8/images/train/000000000030.jpg",
+                "coco8/images/train/000000000034.jpg",
+                "coco8/images/val/000000000036.jpg",
+                "coco8/images/val/000000000042.jpg",
+                "coco8/images/val/000000000049.jpg",
+                "coco8/images/val/000000000061.jpg"
+              ]
+            },
+            {
+              "id": "知识点",
+              "title": "知识点",
+              "path": "知识点",
+              "hasReadme": false,
+              "tree": [
+                {
+                  "type": "file",
+                  "name": "榜单.md",
+                  "path": "榜单.md",
+                  "lang": "md"
+                },
+                {
+                  "type": "file",
+                  "name": "链接.md",
+                  "path": "链接.md",
+                  "lang": "md"
+                },
+                {
+                  "type": "file",
+                  "name": "实体项目.md",
+                  "path": "实体项目.md",
+                  "lang": "md"
+                }
+              ],
+              "skipped": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

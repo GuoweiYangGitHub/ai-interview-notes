@@ -1,0 +1,4 @@
+# MinerU 本地解析（PDF → Markdown）。体积大，建议独立 venv。
+# Python 3.10–3.13 较稳。
+mineru[pipeline]>=2.0.0
+reportlab>=4.0.0

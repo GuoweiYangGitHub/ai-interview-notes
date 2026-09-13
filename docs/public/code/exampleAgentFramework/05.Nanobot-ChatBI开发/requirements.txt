@@ -1,0 +1,8 @@
+nanobot-ai
+python-dotenv>=1.0.0
+pandas>=2.0.0
+numpy>=1.24.0
+matplotlib>=3.8.0
+statsmodels>=0.14.0
+# prophet 可选：pip install prophet
+# 有 TUSHARE_TOKEN 时 seed_db.py 会用来拉日线：pip install tushare

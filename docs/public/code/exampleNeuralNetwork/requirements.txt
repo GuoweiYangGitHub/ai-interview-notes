@@ -1,0 +1,8 @@
+numpy>=1.24
+# 04.Keras最小回归 才需要
+tensorflow>=2.14
+# 05 / 06 CNN 需要
+torch>=2.0
+matplotlib>=3.7
+# 07 / 08 YOLO 才需要
+ultralytics>=8.0

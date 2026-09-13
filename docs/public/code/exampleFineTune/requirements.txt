@@ -1,0 +1,13 @@
+# LLM 微调 / GRPO（Unsloth）。需要 NVIDIA GPU；建议独立 venv。
+# 安装参考 Unsloth 官方文档；以下版本对齐课盘演示。
+datasets>=2.19.0
+pandas>=2.0.0
+peft>=0.18.0
+Pillow>=10.0.0
+openpyxl>=3.1.0
+torch>=2.0.0
+transformers>=4.49.0
+trl>=0.25.0
+# unsloth / vllm 请按官方指引安装（Windows 可能受限，推荐 Linux GPU）
+# unsloth
+# vllm
