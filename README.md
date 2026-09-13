@@ -13,3 +13,12 @@ npm run docs:dev
 ```
 
 需要模型服务的示例请先复制 `.env.example` 为 `.env` 并填写已有配置。
+
+本地打包（和 Vercel 同一条命令）：
+
+```bash
+npm run docs:build
+npm run docs:preview
+```
+
+产物在 `docs/.vitepress/dist`。构建前会同步核心能力目录并校验内链。Vercel 导入仓库后会读根目录 `vercel.json`：安装 `npm ci`，构建 `npm run docs:build`，发布该目录。Node 需要 20+。不要在 Vercel 里打开 HTML Auto Minify。

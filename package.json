@@ -4,6 +4,9 @@
   "version": "0.1.0",
   "type": "module",
   "scripts": {
+    "dev": "npm run docs:dev",
+    "build": "npm run docs:build",
+    "preview": "vitepress preview docs",
     "docs:dev": "node scripts/sync-core-topics.mjs && vitepress dev docs",
     "docs:build": "node scripts/sync-core-topics.mjs && node scripts/verify-doc-links.mjs && vitepress build docs && node scripts/verify-core-topics.mjs",
     "docs:preview": "vitepress preview docs",
@@ -76,5 +79,8 @@
     "tsx": "^4.20.5",
     "typescript": "^5.9.2",
     "vitepress": "next"
+  },
+  "engines": {
+    "node": ">=20"
   }
 }

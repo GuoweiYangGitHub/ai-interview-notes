@@ -16,6 +16,7 @@ export default defineConfig({
   lang: 'zh-CN',
   title: 'Agent Notes',
   description: 'Agent 系统化笔记、能力地图与可运行示例',
+  cleanUrls: true,
   srcExclude: ['public/**'],
   markdown: {
     config(md) {
@@ -68,9 +69,7 @@ export default defineConfig({
           ],
         },
       ],
-      '/examples/': [
-        { text: '可运行示例', link: '/examples/' },
-      ],
+      '/examples/': [{ text: '可运行示例', link: '/examples/' }],
     },
     outline: { label: '本页目录' },
     docFooter: { prev: '上一页', next: '下一页' },
