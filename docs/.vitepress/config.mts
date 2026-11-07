@@ -33,12 +33,14 @@ export default defineConfig({
       { text: '开发框架', link: '/A-应用开发/04-应用框架/' },
       { text: '工程落地', link: '/B-工程落地/' },
       { text: '模型选型', link: '/C-模型能力/' },
+      { text: 'AI 架构', link: '/D-AI架构/' },
     ],
     sidebar: {
       '/核心能力/': [{ text: '核心能力', link: '/核心能力/' }],
       '/A-应用开发/': [abcSections['/A-应用开发/'].home],
       '/B-工程落地/': [abcSections['/B-工程落地/'].home],
       '/C-模型能力/': [abcSections['/C-模型能力/'].home],
+      '/D-AI架构/': [abcSections['/D-AI架构/'].home],
       '/E-代码示例/': examplesSidebar,
       '/语法对照/': [
         { text: '语法对照', link: '/语法对照/' },
@@ -56,7 +58,12 @@ export default defineConfig({
     },
     outline: { label: '本页目录' },
     sidebarMenuLabel: '专题目录',
-    socialLinks: [{ icon: 'github', link: 'https://github.com/GuoweiYangGitHub/ai-interview-notes' }],
+    socialLinks: [
+      {
+        icon: 'github',
+        link: 'https://github.com/GuoweiYangGitHub/ai-interview-notes',
+      },
+    ],
     docFooter: { prev: '上一页', next: '下一页' },
     lastUpdated: { text: '最后更新' },
     search: { provider: 'local' },
