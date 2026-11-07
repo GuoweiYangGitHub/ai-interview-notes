@@ -1,20 +1,7 @@
 ---
 layout: home
-
-hero:
-  name: Agent Notes
-  text: AI 应用能力地图
-  tagline: 笔记与 AI 应用能力地图
-  actions:
-    - theme: brand
-      text: 核心能力
-      link: /核心能力/
-    - theme: alt
-      text: 能力地图
-      link: '#能力地图'
-    - theme: alt
-      text: 技术专题
-      link: /A-应用开发/
+title: 首页
+description: 面向 AI 应用开发工程师的开源笔记，按学习路线、技术专题和代码示例查阅。
 ---
 
-<CapabilityMap />
+<HomePage />

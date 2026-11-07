@@ -13,3 +13,4 @@
 | 05  | 05.MCP协议融入Agent/                           | [`npm run 05`](05.MCP协议融入Agent/README.md)                               | 工具在进程外、需发现再接入 Action 时 |
 | 06  | 06.独立的运行环境设计（沙箱）/                 | [`npm run 06` / `06:01` … `06:05`](06.独立的运行环境设计（沙箱）/README.md) | 模型指令不能直接打进本机时           |
 | 07  | 07.规划转任务，任务转Loop/                     | [`npm run 07`](07.规划转任务，任务转Loop/README.md)                         | 先出计划、再任务板、再循环收敛时     |
+| 08  | 08.Skills撰写质量验证/                         | [`npm run 08` / `08:check` / `08:score`](08.Skills撰写质量验证/README.md)   | 要判断 skill 会不会加载、写得好不好时 |

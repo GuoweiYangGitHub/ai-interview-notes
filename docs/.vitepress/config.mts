@@ -14,8 +14,8 @@ const examplesSidebar = JSON.parse(
 
 export default defineConfig({
   lang: 'zh-CN',
-  title: 'Agent Notes',
-  description: 'Agent 系统化笔记与 AI 应用能力地图',
+  title: 'AI 应用开发笔记',
+  description: '面向 AI 应用开发工程师的开源笔记：知识点、技术问答与代码示例',
   cleanUrls: true,
   srcExclude: ['public/**', '课程练习/**', 'examples/**'],
   markdown: {
@@ -26,12 +26,13 @@ export default defineConfig({
   },
   themeConfig: {
     nav: [
-      { text: '核心能力', link: '/核心能力/' },
-      { text: 'AI 应用构建', link: '/A-应用开发/' },
-      { text: '模型原理与选型', link: '/C-模型能力/' },
-      { text: '服务与生产工程', link: '/B-工程落地/' },
-      { text: '代码参考', link: '/E-代码示例/' },
-      { text: '语法参考', link: '/语法对照/' },
+      { text: 'AI 应用开发', link: '/A-应用开发/' },
+      { text: '提示词工程', link: '/A-应用开发/01-Prompt与上下文工程/知识点' },
+      { text: 'RAG 知识库', link: '/A-应用开发/02-RAG与知识库/知识点' },
+      { text: 'Agent 与工具', link: '/A-应用开发/03-Agent与工具调用/知识点' },
+      { text: '开发框架', link: '/A-应用开发/04-应用框架/' },
+      { text: '工程落地', link: '/B-工程落地/' },
+      { text: '模型选型', link: '/C-模型能力/' },
     ],
     sidebar: {
       '/核心能力/': [{ text: '核心能力', link: '/核心能力/' }],
@@ -54,6 +55,8 @@ export default defineConfig({
       ],
     },
     outline: { label: '本页目录' },
+    sidebarMenuLabel: '专题目录',
+    socialLinks: [{ icon: 'github', link: 'https://github.com/GuoweiYangGitHub/ai-interview-notes' }],
     docFooter: { prev: '上一页', next: '下一页' },
     lastUpdated: { text: '最后更新' },
     search: { provider: 'local' },

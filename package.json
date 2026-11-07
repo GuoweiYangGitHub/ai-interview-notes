@@ -19,6 +19,9 @@
     "example:05": "tsx examples/05.MCP协议融入Agent/index.ts",
     "example:06": "tsx examples/06.独立的运行环境设计（沙箱）/index.ts",
     "example:07": "tsx examples/07.规划转任务，任务转Loop/index.ts",
+    "example:08": "tsx \"examples/08.Skills撰写质量验证/index.ts\"",
+    "example:08:check": "tsx \"examples/08.Skills撰写质量验证/index.ts\" check",
+    "example:08:score": "tsx \"examples/08.Skills撰写质量验证/index.ts\" score",
     "example:dify": "tsx cookbook/01.Dify API使用/index.ts",
     "example:coze": "tsx cookbook/02.Coze API使用/index.ts",
     "example:reactive": "tsx cookbook/12.反应式智能体/index.ts",
@@ -44,6 +47,9 @@
     "06:04": "tsx examples/06.独立的运行环境设计（沙箱）/04.microVM/index.ts",
     "06:05": "tsx examples/06.独立的运行环境设计（沙箱）/05.托管沙盒/index.ts",
     "06:docker": "npm run 06:02",
+    "08": "tsx \"examples/08.Skills撰写质量验证/index.ts\"",
+    "08:check": "tsx \"examples/08.Skills撰写质量验证/index.ts\" check",
+    "08:score": "tsx \"examples/08.Skills撰写质量验证/index.ts\" score",
     "dify": "npm run example:dify",
     "coze": "npm run example:coze",
     "agent:reactive": "npm run example:reactive",
@@ -68,6 +74,7 @@
     "langchain": "^1.5.10",
     "openai": "^4.104.0",
     "sql.js": "^1.14.2",
+    "yaml": "^2.9.1",
     "zod": "^3.25.76"
   },
   "devDependencies": {

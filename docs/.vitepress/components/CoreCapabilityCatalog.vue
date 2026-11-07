@@ -32,6 +32,7 @@ onMounted(() => {
   }
   hydrated.value = true
   syncFromLocation()
+  if (!selectedId.value) selectedId.value = manifest.groups[0]?.topics[0]?.id || ''
   window.addEventListener('hashchange', syncFromLocation)
   window.addEventListener('popstate', syncFromLocation)
 })

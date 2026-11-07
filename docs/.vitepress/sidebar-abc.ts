@@ -15,14 +15,15 @@ const frameworkQuiz = '/A-应用开发/04-应用框架/开发框架面试题'
 
 export const abcSections: Record<string, AbcSection> = {
   '/A-应用开发/': {
-    home: { text: 'AI 应用构建', link: '/A-应用开发/' },
+    home: { text: 'AI 应用开发', link: '/A-应用开发/' },
     notes: [
-      { text: '提示词', link: '/A-应用开发/01-Prompt与上下文工程/知识点' },
-      { text: '知识库', link: '/A-应用开发/02-RAG与知识库/知识点' },
-      { text: '智能体', link: '/A-应用开发/03-Agent与工具调用/知识点' },
+      { text: '提示词工程与上下文', link: '/A-应用开发/01-Prompt与上下文工程/知识点' },
+      { text: 'RAG 与知识库', link: '/A-应用开发/02-RAG与知识库/知识点' },
+      { text: 'Agent 与工具调用', link: '/A-应用开发/03-Agent与工具调用/知识点' },
       {
-        text: '应用框架',
+        text: '开发框架',
         items: [
+          { text: '框架总览', link: '/A-应用开发/04-应用框架/' },
           {
             text: 'LangChain 家族',
             items: [
@@ -37,14 +38,14 @@ export const abcSections: Record<string, AbcSection> = {
           { text: 'OpenManus', pair: 'OpenManus', link: '/A-应用开发/04-应用框架/OpenManus' },
         ],
       },
-      { text: '平台与业务', link: '/A-应用开发/05-平台与业务场景/知识点' },
+      { text: '平台与业务场景', link: '/A-应用开发/05-平台与业务场景/知识点' },
     ],
     quiz: [
-      { text: '提示词', link: '/A-应用开发/01-Prompt与上下文工程/面试题' },
-      { text: '知识库', link: '/A-应用开发/02-RAG与知识库/面试题' },
-      { text: '智能体', link: '/A-应用开发/03-Agent与工具调用/面试题' },
+      { text: '提示词工程与上下文', link: '/A-应用开发/01-Prompt与上下文工程/面试题' },
+      { text: 'RAG 与知识库', link: '/A-应用开发/02-RAG与知识库/面试题' },
+      { text: 'Agent 与工具调用', link: '/A-应用开发/03-Agent与工具调用/面试题' },
       {
-        text: '应用框架',
+        text: '开发框架',
         items: [
           {
             text: 'LangChain 家族',
@@ -60,20 +61,20 @@ export const abcSections: Record<string, AbcSection> = {
           { text: 'OpenManus', pair: 'OpenManus', link: `${frameworkQuiz}#openmanus-四级继承是什么` },
         ],
       },
-      { text: '平台与业务', link: '/A-应用开发/05-平台与业务场景/面试题' },
+      { text: '平台与业务场景', link: '/A-应用开发/05-平台与业务场景/面试题' },
     ],
   },
   '/B-工程落地/': {
     home: { text: '服务与生产工程', link: '/B-工程落地/' },
     notes: [
       { text: '服务、质量与交付', link: '/B-工程落地/01-应用服务与交付/知识点' },
-      { text: '部署', link: '/B-工程落地/06-推理部署与优化/部署-知识点' },
+      { text: '推理部署', link: '/B-工程落地/06-推理部署与优化/部署-知识点' },
       { text: '推理优化', link: '/B-工程落地/06-推理部署与优化/推理优化-知识点' },
-      { text: '华为升腾', link: '/B-工程落地/06-推理部署与优化/华为升腾部署DEEPSEEK' },
+      { text: '华为昇腾部署案例', link: '/B-工程落地/06-推理部署与优化/华为升腾部署DEEPSEEK' },
     ],
     quiz: [
       { text: '服务、质量与交付', link: '/B-工程落地/01-应用服务与交付/技术问答' },
-      { text: '部署', link: '/B-工程落地/06-推理部署与优化/部署-面试题' },
+      { text: '推理部署', link: '/B-工程落地/06-推理部署与优化/部署-面试题' },
       { text: '推理优化', link: '/B-工程落地/06-推理部署与优化/推理优化-面试题' },
     ],
   },

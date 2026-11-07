@@ -97,6 +97,7 @@ const TAXONOMY = [
           { path: 'examples/05.MCP协议融入Agent' },
           { path: 'examples/06.独立的运行环境设计（沙箱）' },
           { path: 'examples/07.规划转任务，任务转Loop' },
+          { path: 'examples/08.Skills撰写质量验证' },
         ],
       },
       {

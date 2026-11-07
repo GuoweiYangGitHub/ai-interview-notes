@@ -1,7 +1,7 @@
 {
   "generatedAt": "2026-09-12T07:57:07.665Z",
   "source": "F:\\agent代码示例",
-  "fileCount": 298,
+  "fileCount": 316,
   "skippedCount": 35,
   "groups": [
     {
@@ -444,6 +444,177 @@
                   "name": "README.md",
                   "path": "README.md",
                   "lang": "md"
+                }
+              ],
+              "skipped": []
+            },
+            {
+              "id": "examples/08.Skills撰写质量验证",
+              "title": "08.Skills撰写质量验证",
+              "path": "examples/08.Skills撰写质量验证",
+              "hasReadme": true,
+              "tree": [
+                {
+                  "type": "dir",
+                  "name": "fixtures",
+                  "children": [
+                    {
+                      "type": "dir",
+                      "name": "skill-semantic-review",
+                      "children": [
+                        {
+                          "type": "file",
+                          "name": "SKILL.md",
+                          "path": "fixtures/skill-semantic-review/SKILL.md",
+                          "lang": "md"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "dir",
+                      "name": "skills",
+                      "children": [
+                        {
+                          "type": "dir",
+                          "name": "docx",
+                          "children": [
+                            {
+                              "type": "file",
+                              "name": "SKILL.md",
+                              "path": "fixtures/skills/docx/SKILL.md",
+                              "lang": "md"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "dir",
+                      "name": "skills2",
+                      "children": [
+                        {
+                          "type": "dir",
+                          "name": "docx-writer",
+                          "children": [
+                            {
+                              "type": "file",
+                              "name": "SKILL.md",
+                              "path": "fixtures/skills2/docx-writer/SKILL.md",
+                              "lang": "md"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "dir",
+                          "name": "invalid-skill",
+                          "children": [
+                            {
+                              "type": "file",
+                              "name": "SKILL.md",
+                              "path": "fixtures/skills2/invalid-skill/SKILL.md",
+                              "lang": "md"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "dir",
+                          "name": "pure-guidance-demo",
+                          "children": [
+                            {
+                              "type": "dir",
+                              "name": "references",
+                              "children": [
+                                {
+                                  "type": "file",
+                                  "name": "checklist.md",
+                                  "path": "fixtures/skills2/pure-guidance-demo/references/checklist.md",
+                                  "lang": "md"
+                                }
+                              ]
+                            },
+                            {
+                              "type": "file",
+                              "name": "SKILL.md",
+                              "path": "fixtures/skills2/pure-guidance-demo/SKILL.md",
+                              "lang": "md"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "file",
+                  "name": "catalog.ts",
+                  "path": "catalog.ts",
+                  "lang": "ts"
+                },
+                {
+                  "type": "file",
+                  "name": "check.ts",
+                  "path": "check.ts",
+                  "lang": "ts"
+                },
+                {
+                  "type": "file",
+                  "name": "client.ts",
+                  "path": "client.ts",
+                  "lang": "ts"
+                },
+                {
+                  "type": "file",
+                  "name": "diagnose.ts",
+                  "path": "diagnose.ts",
+                  "lang": "ts"
+                },
+                {
+                  "type": "file",
+                  "name": "frontmatter.ts",
+                  "path": "frontmatter.ts",
+                  "lang": "ts"
+                },
+                {
+                  "type": "file",
+                  "name": "index.ts",
+                  "path": "index.ts",
+                  "lang": "ts"
+                },
+                {
+                  "type": "file",
+                  "name": "inspect.ts",
+                  "path": "inspect.ts",
+                  "lang": "ts"
+                },
+                {
+                  "type": "file",
+                  "name": "README.md",
+                  "path": "README.md",
+                  "lang": "md"
+                },
+                {
+                  "type": "file",
+                  "name": "report.ts",
+                  "path": "report.ts",
+                  "lang": "ts"
+                },
+                {
+                  "type": "file",
+                  "name": "schema.ts",
+                  "path": "schema.ts",
+                  "lang": "ts"
+                },
+                {
+                  "type": "file",
+                  "name": "score.ts",
+                  "path": "score.ts",
+                  "lang": "ts"
+                },
+                {
+                  "type": "file",
+                  "name": "select.ts",
+                  "path": "select.ts",
+                  "lang": "ts"
                 }
               ],
               "skipped": []
