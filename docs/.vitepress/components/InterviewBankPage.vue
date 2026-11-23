@@ -101,6 +101,14 @@ function localNumber(index: number) {
               <td>生成前后检查答案有没有检索证据支持；没有证据就拒答或降级，防止编造。</td>
             </tr>
             <tr>
+              <td>泛化损失</td>
+              <td>模型或系统在常见场景表现好，遇到长尾、跨域、混合意图等新场景时效果明显下降。Expert 拆分、微调和规则化后要专门用长尾集压测。</td>
+            </tr>
+            <tr>
+              <td>Critic 校验</td>
+              <td>由独立角色或模型审查主 Agent 的计划、工具调用或答案，发现问题就要求修订、重试或转人工。和自评不同，最好用独立上下文、规则或可执行检查。</td>
+            </tr>
+            <tr>
               <td>Prometheus 定位退化</td>
               <td>用 Prometheus 监控 P95、错误率、空答率等指标，发现新版本上线后的质量下降，再结合 trace 和评测定位。</td>
             </tr>
@@ -115,6 +123,10 @@ function localNumber(index: number) {
             <tr>
               <td>Checkpoint</td>
               <td>检查点。把执行中的状态、已完成步骤和中间结果持久化；中断、超时或重启后从最近检查点恢复，不必从头重跑。</td>
+            </tr>
+            <tr>
+              <td>Correlation ID</td>
+              <td>一次请求或异步任务的全局关联标识，贯穿入口、MQ 消息、状态表、工具调用、回调、日志和 trace，用同一个 ID 把上下游串起来。常与 taskId / traceId 配合。</td>
             </tr>
             <tr>
               <td>索引发布</td>
