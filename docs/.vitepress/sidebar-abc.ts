@@ -60,11 +60,7 @@ export const interviewBankSidebar = [
   },
   ...introCategories.map(categoryGroup),
   ...predictedCategories.map(categoryGroup),
-  {
-    text: '面试官追问',
-    collapsed: false,
-    items: followUpCategories.map(categoryGroup),
-  },
+  ...followUpCategories.map(categoryGroup),
 ]
 
 export type SidebarItem = {
@@ -332,20 +328,21 @@ export const abcSections: Record<string, AbcSection> = {
       {
         text: 'THINGJS 文档 RAG',
         items: [
-          { text: '项目问答 R01–R18', link: `${thingjs}/12-项目问答` },
-          { text: '关键取舍', link: `${thingjs}/09-关键取舍` },
-          { text: '面试讲法', link: `${thingjs}/10-面试讲法` },
-          { text: '八股项目答法', link: `${thingjs}/11-八股项目答法` },
+          { text: '架构图', link: `${thingjs}/架构图` },
+          { text: '3 分钟演讲稿', link: `${thingjs}/3分钟演讲稿` },
+          { text: '面试问题', link: `${thingjs}/面试问题` },
         ],
       },
       {
         text: '江中智能助手',
         items: [
-          { text: '面试问答 J01–J21', link: `${jiangzhong}/11-面试问答` },
-          { text: '关键取舍', link: `${jiangzhong}/09-关键取舍` },
-          { text: '数字速查与讲法', link: `${jiangzhong}/10-数字速查与讲法` },
+          { text: '架构图', link: `${jiangzhong}/架构图` },
+          { text: '3 分钟演讲稿', link: `${jiangzhong}/3分钟演讲稿` },
+          { text: '面试问题', link: `${jiangzhong}/面试问题` },
         ],
       },
+      { text: '项目面试题', link: '/03-项目实战/项目面试题' },
+      { text: '对比与压力问题', link: '/03-项目实战/对比与压力问题' },
       { text: '中国移动网络拓扑', link: '/03-项目实战/04-中国移动网络拓扑' },
       { text: '跨项目对比', link: '/03-项目实战/03-跨项目对比' },
     ],

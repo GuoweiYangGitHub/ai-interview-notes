@@ -49,12 +49,14 @@ const sections = [
     topics: [
       {
         label: 'THINGJS 文档 RAG',
-        href: '/03-项目实战/01-THINGJS文档RAG/12-项目问答',
+        href: '/03-项目实战/01-THINGJS文档RAG/面试问题',
       },
       {
         label: '江中智能助手',
-        href: '/03-项目实战/02-江中智能助手/11-面试问答',
+        href: '/03-项目实战/02-江中智能助手/面试问题',
       },
+      { label: '项目面试题', href: '/03-项目实战/项目面试题' },
+      { label: '对比与压力问题', href: '/03-项目实战/对比与压力问题' },
       {
         label: '中国移动网络拓扑',
         href: '/03-项目实战/04-中国移动网络拓扑',
@@ -65,17 +67,10 @@ const sections = [
   {
     number: '04',
     title: '面试题库',
-    summary: '项目 3 分钟 → Agent → 简历 → 前端。',
+    summary: 'Agent → RAG → 工具 → 工程 → 前端。',
     href: '/04-面试题库/',
     topics: [
-      { label: '项目 3 分钟简介', href: '/04-面试题库/#project-intro-Q01' },
-      {
-        label: '项目架构图',
-        href: '/04-面试题库/#project-architecture-Q01',
-      },
-      { label: 'Agent 重点问题', href: '/04-面试题库/#agent-Q01' },
-      { label: '简历关键词', href: '/04-面试题库/#resume-keywords-Q01' },
-      { label: '前端内容', href: '/04-面试题库/#frontend-Q01' },
+      { label: '前端与 JavaScript', href: '/04-面试题库/#frontend-Q01' },
     ],
   },
 ]

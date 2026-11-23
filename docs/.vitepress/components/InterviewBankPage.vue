@@ -34,12 +34,6 @@ const followUpCategories = orderedCategories.filter(
 const blocks = [
   ...introCategories.map((category) => ({ type: 'category', category })),
   ...predictedCategories.map((category) => ({ type: 'category', category })),
-  {
-    type: 'label',
-    id: 'follow-ups',
-    title: '面试官追问',
-    lead: '下面按项目、智能体、简历、对比和前端分类整理；每个分类从 Q01 开始。',
-  },
   ...followUpCategories.map((category) => ({ type: 'category', category })),
 ]
 
@@ -141,21 +135,8 @@ function localNumber(index: number) {
       </div>
     </section>
 
-    <template
-      v-for="(block, blockIndex) in blocks"
-      :key="block.type === 'category' ? block.category.id : `label-${blockIndex}`"
-    >
+    <template v-for="block in blocks" :key="block.category.id">
       <section
-        v-if="block.type === 'label'"
-        :id="block.id"
-        class="interview-bank-doc__section"
-      >
-        <h2>{{ block.title }}</h2>
-        <p>{{ block.lead }}</p>
-      </section>
-
-      <section
-        v-else
         :id="`cat-${block.category.id}`"
         class="interview-bank-doc__category"
       >

@@ -1,307 +1,7 @@
 export const categories = [
   {
-    id: 'project-intro',
-    title: '项目 3 分钟简介',
-    questions: [
-      {
-        id: 'Q01',
-        title: '江中智能助手 3 分钟',
-        body: `
-<p>江中智能助手是面向制药车间内网的对话式业务助手。用户可以用自然语言查规程、设备状态、告警、工单、库存和批次，也可以办理批次追溯、维修工单、巡检，并定位到三维场景里的设备。</p>
-<p>我独立交付了 Vue 3 对话前端和 TypeScript / Express 服务端。服务端不是一个大提示词，而是 <strong>分类 → 规划 → 执行</strong>：先判断意图，再产出目标和结构化计划，最后由<strong>计划编译器</strong>校验工具、参数、依赖和写边界，交给 <strong>计划步骤 / 计划汇总</strong> 执行；固定业务流程编译成 LangGraph 子图。</p>
-<p>写操作必须走<strong>提议 → 审批 → 执行</strong>，确认幂等并写审计；三维动作交给宿主执行，<strong>没有回执不算成功</strong>。会话、图状态、审批和场景回执存 PostgreSQL，服务重启后能续接，<strong>状态不明不自动重放</strong>。</p>
-<p>评测分两层：第一层用<strong>固定断言</strong>检查工具、流程和状态等确定性行为；第二层按<strong>任务完成、安全拦截、数值溯源</strong>做质量门禁。用例覆盖正常问答、多步任务、缺参、越权、空结果、工具失败和注入；不达线就阻断发布。审阅台支持回放、人工标注、参考标准对比和回归用例。</p>
-<p>三句话收尾：<strong>模型负责理解和提议，程序负责边界和结算</strong>；<strong>没有回执不算成功</strong>；<strong>评测和门禁让改动可回归</strong>。</p>
-`,
-      },
-      {
-        id: 'Q02',
-        title: 'THINGJS 文档问答系统 3 分钟',
-        body: `
-<p>ThingJS 文档问答系统面向官方文档和示例代码，网页助手和编辑器通过工具协议共用一套检索、生成链路。</p>
-<p>文档按 Markdown 结构和代码语法树切分，保留类 / 成员身份和父块；检索走<strong>向量 + 关键词检索</strong>，用<strong>排名融合</strong>把两路结果合并，再做<strong>精确符号置顶</strong>、类 / 成员采纳和<strong>父块回填</strong>；生成用 YAML 提示词 + LangChain 表达式，做证据筛选、领域守卫和引用校验。</p>
-<p>索引按文件内容指纹增量构建，索引清单校验后切激活指针；文档改动可热更新，发布门禁失败回滚。评测有 100 题检索集、30 题生成集和 12 题自动评审校准，另加覆盖集、真实问法和代码题；三套门禁绑定配置版本。</p>
-<p>我负责前端、检索、生成和评测。三句话：<strong>切片不是固定长度</strong>；<strong>混合检索同时解决语义和精确符号</strong>；<strong>引用检查只能保证引用真实存在，不能保证引用支持结论</strong>。</p>
-`,
-      },
-      {
-        id: 'Q03',
-        title: '中国移动网络拓扑 3 分钟',
-        body: `
-<p>中国移动集团网络拓扑是集团级网络资源管理和运行监控的三维可视化平台，用地球场景展示集团、省份和区域的网络资源，支持 <strong>3D 拓扑</strong>和 <strong>2D 逻辑拓扑</strong>多层级查看。</p>
-<p>我参与三维拓扑模块的设计和开发：地球与 3D 拓扑联动、3D / 2D 构建与切换、设备 / 线路 / 标签 / 告警管理，以及专线等业务数据适配。</p>
-<p>布局按节点数、连接数、双向 / 备用线路比例和中心节点判断<strong>树状、链式、星型 / 复杂拓扑</strong>，用<strong>邻接表</strong>算层级和坐标；同一对设备多条线做<strong>平行偏移</strong>。交互支持线路高亮、双击下钻、按业务筛线、相机飞行、视角保存 / 恢复和标签显隐。</p>
-<p>我独立完成的<strong>聚合下钻</strong>功能已经迁入中国移动项目。</p>
-`,
-      },
-    ],
-  },
-  {
-    id: 'project-architecture',
-    title: '项目架构与主链路',
-    questions: [
-      {
-        id: 'Q04',
-        title: '画一下江中项目架构',
-        figure: 'jiangzhong',
-        body: `
-<p>画图顺序：宿主聊天窗口 → 后端服务器 → 助手节点 → 模型服务 / 工具与场景节点 / 业务中台 / Dify 知识库。</p>
-<ul>
-<li><strong>宿主</strong>：浏览器聊天模块、三维场景、审批卡、场景回执。</li>
-<li><strong>后端</strong>：Express 网关、鉴权、会话锁、服务器推送、后台运行。</li>
-<li><strong>助手</strong>：分类、规划、计划编译、LangGraph 主图、固定流程子图。</li>
-<li><strong>外部</strong>：模型网关、工具协议里的工具、业务中台、Dify 知识库。</li>
-</ul>
-<p>讲的时候补一句：模型只负责理解和提议，工具、权限、写操作和回执由程序控制。</p>
-`,
-      },
-      {
-        id: 'Q05',
-        title: '画一下 THINGJS 项目架构',
-        figure: 'thingjs',
-        body: `
-<p>这张图是一套完整的知识检索工程链路，按 1–6 读：</p>
-<ul>
-<li><strong>1. 系统整体流程</strong>：前端 → API → 检索 → 生成 → 评测 / 发布。</li>
-<li><strong>2. 离线索引流程</strong>：文档新增 / 修改 / 删除 → 解析 → 切片 → 向量化 / 关键词检索 → 索引版本。</li>
-<li><strong>3. 在线检索问答</strong>：意图 / 查询计划 → 双路召回 → 排名融合 → 父块 → 生成 → 证据守卫。</li>
-<li><strong>4. 评测系统</strong>：检索 / 生成评测、自动评审、回归。</li>
-<li><strong>5. 检索黄金集</strong>：固定题集与基线。</li>
-<li><strong>6. 发布门禁系统</strong>：索引清单 / 激活指针、门禁、回滚。</li>
-</ul>
-<p>另外三块：<strong>记忆系统</strong>、<strong>会话管理</strong>、<strong>日报和混合排序</strong>。</p>
-<p>讲的时候补一句：网页、编辑器和评测平台共用同一套检索与生成链路。</p>
-`,
-      },
-      {
-        id: 'Q06',
-        title: '江中一次请求怎么走？',
-        body: `
-<p><strong>接入</strong>：前端调用两个接口。<strong>普通问答接口</strong>问一次，返回完整回答；<strong>流式问答接口</strong>边生成边返回，前端可以逐字显示。服务端收到请求后解析身份、限流、拿会话锁。</p>
-<p><strong>分类</strong>：判断意图类别；<strong>规划</strong>：产出目标和结构化计划；<strong>执行</strong>：按计划执行。</p>
-<p><strong>计划编译</strong>：校验工具、参数、依赖和写边界；最多 8 步、3 层依赖、每批 3 个并行。</p>
-<p><strong>执行</strong>：只读走 <strong>计划步骤 / 计划汇总</strong>；固定业务走子图；写操作进入审批；三维动作交给宿主并等回执。</p>
-<p><strong>收尾</strong>：组织本轮证据，返回回答；会话、图状态、任务卡、审批和回执落 PostgreSQL。</p>
-`,
-      },
-      {
-        id: 'Q07',
-        title: '江中写操作审批和场景回执怎么走？',
-        body: `
-<p><strong>写操作</strong>：模型提议 → 人工确认 → 执行器执行。确认幂等并写审计；重复点击不会重复派工。状态不明时拒绝自动重放，要求人工核对。</p>
-<p><strong>场景动作</strong>：服务端只生成 <code>动作名 + 参数</code>；宿主执行后回传场景回执。没有回执不算成功；服务器推送上的“正在定位”只是进度。</p>
-<p><strong>边界</strong>：只有聚焦、飞行、告警高亮真正改变场景，其余标记为模拟。</p>
-`,
-      },
-      {
-        id: 'Q08',
-        title: 'THINGJS 一次问答怎么走？',
-        body: `
-<p><strong>离线</strong>：文档解析 → 结构切片 → 父块 → 向量化 +关键词检索→ 索引版本。</p>
-<p><strong>在线</strong>：意图识别 → 查询计划 → 向量 /关键词检索双路召回 →排名融合→ 精确符号置顶 → 类 / 成员采纳 → 父块回填 → 组装上下文。</p>
-<p><strong>生成</strong>：结构化 JSON → 回答形态分类 → 证据筛选 → 领域守卫 → 引用校验 → 确定性清洗。</p>
-<p><strong>质量</strong>：检索黄金集、生成黄金集、裁判校准；三套门禁绑定配置版本。</p>
-`,
-      },
-      {
-        id: 'Q09',
-        title: 'THINGJS 索引怎么发布和回滚？',
-        body: `
-<p>索引按文件 hash 增量构建，未变文件复用上一版向量；切块指纹或维度变化才全量。</p>
-<p>构建产物写 manifest 和 <code>BUILD_OK</code>；校验通过后切 <code>索引激活文件</code> 指针，再热加载新版本。</p>
-<p>发布门禁失败时回滚 <code>索引激活文件</code> 并热加载旧版；prune 保留最近 5 个可用版本。</p>
-<p>docs 改动可触发热更新，去抖 5s、冷却 2.5s；提示词不热更新，改 YAML 需重启。</p>
-`,
-      },
-    ],
-  },
-  {
-    id: 'agent',
-    title: '智能体重点问题',
-    questions: [
-      {
-        id: 'Q10',
-        title: '为什么用 LangGraph 状态图 / 智能体，而不是固定流程？',
-        body: `
-<p>固定流程要求执行前把顺序写死。江中很多请求的下一步取决于用户要做哪几件事、上一步查到了什么，整条路径写不出来。</p>
-<p>所以用 <strong>分类 → 规划 → 执行</strong>：模型只负责理解与提议，程序负责计划校验、工具执行和结算。固定业务仍然编译成子图，不是所有请求都进智能体。</p>
-<p><strong>关键词</strong>：智能体适用边界、固定流程、状态图、模型提议 / 程序结算。</p>
-`,
-      },
-      {
-        id: 'Q11',
-        title: '分类 → 规划 → 执行 分别做什么？',
-        body: `
-<p><strong>分类</strong>：判断意图类别。</p>
-<p><strong>规划</strong>：产出目标和结构化计划。</p>
-<p><strong>执行</strong>：按计划执行；只读走计划执行器，固定业务走子图，写操作进入审批。</p>
-<p>上限：计划最多 <strong>8 步 / 3 层依赖</strong>，每批最多 <strong>3 个</strong>并行。</p>
-`,
-      },
-      {
-        id: 'Q12',
-        title: '计划编译器校验什么？怎么防止乱跑？',
-        body: `
-<p>校验<strong>工具是否已注册、参数是否符合 Schema、依赖是否成环、是否越过写边界</strong>。</p>
-<p>目录外工具直接拒绝；缺参先问，不猜；只读失败可重试，写操作不自动重试。</p>
-<p>模型只能提议，执行权在程序。</p>
-`,
-      },
-      {
-        id: 'Q13',
-        title: '工具目录怎么用？参数怎么校验？',
-        body: `
-<p>宿主或中台每轮上报工具目录，模型只看到本次目录。</p>
-<p>参数用 <strong>参数结构校验</strong> 运行时校验；参数错误最多修两次，不能借机换工具。</p>
-<p>越权在调用前拦；工具返回里的注入指令不执行。</p>
-`,
-      },
-      {
-        id: 'Q14',
-        title: '写操作为什么必须人工确认？怎么幂等？',
-        body: `
-<p>写操作走<strong>提议 → 审批 → 执行</strong>。确认幂等并写审计；重复点击不会重复下单 / 派工。</p>
-<p>状态不明时拒绝自动重放，要求人工核对。</p>
-<p><strong>关键词</strong>：人工审批、幂等、审计、状态不明、不重放。</p>
-`,
-      },
-      {
-        id: 'Q15',
-        title: '会话、图状态、审批、回执怎么存？重启怎么恢复？',
-        body: `
-<p>会话、图状态、任务卡、审批和场景回执存 <strong>PostgreSQL</strong>；同一会话用<strong>咨询锁</strong>串行。</p>
-<p>恢复时读取已完成结果引用，<strong>工单查询不会重跑</strong>；状态不明只核对，不重放。</p>
-<p><strong>关键词</strong>：状态快照、PostgreSQL、会话锁、结果引用、恢复。</p>
-`,
-      },
-      {
-        id: 'Q16',
-        title: '三维动作怎么保证真的执行了？',
-        body: `
-<p>服务端只生成 <code>动作名 + 参数</code> 的动作；宿主执行后回传 <strong>场景回执</strong>。</p>
-<p>没有回执不算成功；服务器推送上的“正在定位”只是进度，不是执行结果。</p>
-<p>真正改变场景的只有聚焦、飞行、告警高亮，其余标记为模拟。</p>
-`,
-      },
-      {
-        id: 'Q17',
-        title: '智能体怎么评测？',
-        body: `
-<p><strong>第一层：固定断言</strong>，检查工具、流程和状态等确定性行为。</p>
-<p><strong>第二层：质量门禁</strong>，按任务完成、安全拦截、数值溯源评价。</p>
-<p>用例覆盖正常问答、多步任务、缺参、越权、空结果、工具失败和注入；审阅台支持回放、人工标注、参考标准对比和回归用例。</p>
-<p><strong>关键词</strong>：固定断言、质量门禁、任务完成、安全拦截、数值溯源、人工标注、回归用例。</p>
-`,
-      },
-      {
-        id: 'Q18',
-        title: '流量涨 10 倍，哪里先崩？',
-        body: `
-<p>先看<strong>进程内限流</strong>、<strong>会话锁</strong>、<strong>服务器推送连接</strong>、<strong>模型网关排队</strong>、<strong>向量检索</strong>和<strong>成本</strong>。</p>
-<p>多实例要外置限流和状态；会话要能分片；服务器推送要考虑粘性。</p>
-<p>先盯 P95、首字延迟、排队时间、工具失败率和单轮成本。</p>
-`,
-      },
-      {
-        id: 'Q19',
-        title: '哪些真正生效，哪些是模拟？怎么反驳“只是套了 LangGraph”？',
-        body: `
-<p>三维只有 3 个方法真正改变场景，其余标记模拟；微调和分布式没有生产验证。</p>
-<p>反驳点不是“我用了 LangGraph”，而是<strong>计划编译器、参数校验、审批幂等、场景回执、评测门禁</strong>这些框架不自带、自己补的工程。</p>
-`,
-      },
-      {
-        id: 'Q20',
-        title: '讲一个失败复盘',
-        body: `
-<p>按 <strong>现象 → 证据 → 哪一层 → 改了什么 → 怎么复验</strong>。</p>
-<p>例子：设备存在但无告警，用户仍要定位；或目标类召回了却没进入最终上下文。</p>
-<p>先说看到了什么证据，再说根因和复验，不要归因于“模型不稳定”。</p>
-`,
-      },
-      {
-        id: 'Q21',
-        title: '项目最大的技术难点是什么？',
-        body: `
-<p>不是“调通模型”，而是<strong>让模型提议可控</strong>：计划要能校验、工具要能绑定、写操作要审批、状态要能恢复、结果要能回执、改动要能回归。</p>
-<p>把这几件事拆开，每件都能落到代码和数字。</p>
-`,
-      },
-    ],
-  },
-  {
-    id: 'resume-keywords',
-    title: '简历关键词',
-    questions: [
-      {
-        id: 'Q22',
-        title: '智能体运行时与业务编排',
-        body: `
-<p><strong>他会问</strong>：LangGraph 到底解决了什么？为什么不用一条链？工具怎么绑？写操作怎么保证不重复？</p>
-<p><strong>一句话接</strong>：固定流程写死顺序，江中的下一步取决于用户要做几件事和上一步查到了什么，所以用 <strong>分类 → 规划 → 执行</strong>；模型只提议，计划编译器校验，写操作走审批，状态和回执落 PostgreSQL。</p>
-`,
-      },
-      {
-        id: 'Q23',
-        title: '检索与回答质量',
-        body: `
-<p><strong>他会问</strong>：为什么不用固定长度切块？向量和关键词检索各解决什么？排名融合为什么比加权求和稳？引用能保证什么？</p>
-<p><strong>一句话接</strong>：按 Markdown 结构和代码 AST 切，保留类 / 成员和父块；向量补语义，关键词检索补精确符号，排名融合按名次合并；引用检查只能保证引用真实存在，不能保证引用支持结论。</p>
-`,
-      },
-      {
-        id: 'Q24',
-        title: '评测与门禁',
-        body: `
-<p><strong>他会问</strong>：你怎么证明改完没退化？裁判有偏差怎么办？门禁会不会误杀？</p>
-<p><strong>一句话接</strong>：评测分两层：第一层固定断言，第二层按任务完成、安全拦截、数值溯源做质量门禁；审阅台支持回放、人工标注、参考标准对比和回归用例；不达线阻断发布。误杀时先看题集分母和阈值，再决定改系统还是改基线。</p>
-`,
-      },
-      {
-        id: 'Q25',
-        title: 'AI 应用前端',
-        body: `
-<p><strong>他会问</strong>：服务器推送怎么解析？取消和重试怎么做？审批卡怎么处理？引用和证据怎么展示？</p>
-<p><strong>一句话接</strong>：<code>ReadableStream + TextDecoder</code> 解析服务器推送；<code>delta / reset / phase / done / error</code> 事件；增量预览不是最终答案，<code>done</code> 才是权威结果；<code>AbortController</code> 取消；审批卡只产出 patch，不自己提交；Markdown 渲染加 XSS 净化。</p>
-`,
-      },
-      {
-        id: 'Q26',
-        title: '前端基础与框架',
-        body: `
-<p><strong>他会问</strong>：事件循环、原型链、闭包、Promise；Vue 响应式、组件通信、<code>v-model</code>；TypeScript 泛型和类型收窄。</p>
-<p><strong>一句话接</strong>：这些是十年基础，按“概念 → 例子 → 项目里怎么用”答。项目里最相关的是服务器推送状态机、审批卡、会话恢复和类型契约。</p>
-`,
-      },
-      {
-        id: 'Q27',
-        title: '小程序 / 跨端',
-        body: `
-<p><strong>他会问</strong>：小程序生命周期、登录流程、扫码、定位、公共能力怎么抽？</p>
-<p><strong>一句话接</strong>：做过嘉士伯多品牌会员小程序，总用户 3000w+、日活 15w+；用 ES6 class 抽公共扫码逻辑和生命周期 hooks，定位和状态管理也复用；接口加密和表单校验防刷、防 XSS。</p>
-`,
-      },
-      {
-        id: 'Q28',
-        title: '三维与大屏',
-        body: `
-<p><strong>他会问</strong>：3D / 2D 拓扑怎么分工？复杂拓扑怎么自动布局？聚合下钻怎么保留上下文？相机和标签怎么不打架？</p>
-<p><strong>一句话接</strong>：3D 看空间层级，2D 看逻辑连接，共享同一份拓扑数据；按节点数、连接数、双向 / 备用线路比例判断树状 / 链式 / 星型 / 复杂拓扑，用邻接表算层级和坐标；聚合按 scope 取子图，返回恢复父级视角和过滤条件。</p>
-`,
-      },
-      {
-        id: 'Q29',
-        title: '工程化',
-        body: `
-<p><strong>他会问</strong>：Vite / Webpack 怎么选？pnpm workspace 怎么管？Playwright 测什么？Docker / CI / Nginx 做过什么？</p>
-<p><strong>一句话接</strong>：工程化不是工具清单，是交付效率和质量：构建、依赖、规范、测试、部署、回滚各有一件事能讲。项目里最相关的是服务器推送测试、索引发布门禁和配置版本。</p>
-`,
-      },
-    ],
-  },
-  {
     id: 'frontend',
-    title: '前端内容',
+    title: '前端与 JavaScript',
     questions: [
       {
         id: 'Q30',
@@ -487,52 +187,59 @@ export const categories = [
 <p>注意：session_key 不下发前端；用 <code>wx.checkSession</code> 检查登录态。</p>
 `,
       },
-    ],
-  },
-  {
-    id: 'compare-pressure',
-    title: '对比与压力题',
-    questions: [
       {
-        id: 'Q51',
-        title: '两个项目都用了工具协议，有什么不同？',
+        id: 'P02',
+        title: 'WebSocket 和 MQTT 有什么区别？',
         body: `
-<p>江中：助手服务端是工具协议里工具的<strong>调用方</strong>，接中台查设备、工单、库存；重点是参数、权限和多步编排。</p>
-<p>THINGJS：项目是知识工具的<strong>提供方</strong>，向编辑器开放检索和问答；重点是证据质量、索引版本和检索稳定性。</p>
+<p><strong>WebSocket</strong>：全双工长连接，客户端和服务端都能主动推；适合实时对话、大屏同步、三维控制。</p>
+<p><strong>MQTT</strong>：发布 / 订阅，轻量、省带宽；适合设备到云、海量设备和弱网环境。</p>
+<p><strong>项目里</strong>：大屏和 iPad 同步用 WebSocket；设备状态上报 / 订阅用 MQTT。</p>
+<p><strong>选型</strong>：看是“双向实时交互”还是“设备遥测和发布订阅”。</p>
 `,
       },
       {
-        id: 'Q52',
-        title: '两个项目怎么判断“做得好”？给什么证据？',
+        id: 'P64',
+        title: 'WebSocket 和 SSE 通信的区别及局限性？',
         body: `
-<p>江中：用真实请求说明是否选对工具、参数是否正确、后续动作是否合理、异常时怎么结束。</p>
-<p>THINGJS：展示检索与回答的逐题记录、证据是否被采用、答案和引用是否匹配、新索引是否通过发布检查。</p>
-<p>报数字前先说清测试条件、题集分母和统计对象。</p>
+<p><strong>简要回答</strong></p>
+<p>最核心的区别是通信方向：<strong>SSE 是服务端单向推</strong>，客户端只能接收，想发消息只能另起一个 HTTP 请求；<strong>WebSocket 是全双工</strong>，双方都可以随时主动发消息。</p>
+<div class="interview-bank-doc__table-wrap">
+<table class="interview-bank-doc__table">
+<thead>
+<tr><th>维度</th><th>SSE</th><th>WebSocket</th></tr>
+</thead>
+<tbody>
+<tr><td>通信方向</td><td>服务端到客户端单向推送</td><td>全双工，双方随时主动发</td></tr>
+<tr><td>适用场景</td><td>LLM 流式输出：模型一直在推 token、用户只是看</td><td>真正需要双向实时交互，比如用户要在模型说话过程中随时打断</td></tr>
+<tr><td>优点</td><td>轻量、HTTP 原生支持、运维简单；OpenAI 和 Anthropic 的 API 用的都是 SSE</td><td>双向、低延迟</td></tr>
+<tr><td>局限</td><td>HTTP/1.1 下有连接数上限；只支持文本传输</td><td>有状态、横向扩展麻烦；容易被企业代理或防火墙拦住</td></tr>
+</tbody>
+</table>
+</div>
+<p>大多数 LLM 文字对话产品用 SSE 就够了；WebSocket 的复杂性只有在真正需要双向实时交互时（比如随时打断）才值得引入。</p>
 `,
       },
       {
-        id: 'Q53',
-        title: '只允许讲一次失败复盘，你选什么？',
+        id: 'P65',
+        title: '为什么要用 WebRTC？它和 WebSocket 在 AI 对话流中的核心差异是什么？',
         body: `
-<p>选一条自己能核对的记录：江中的“设备存在但无告警，仍需定位”，或检索增强生成的“目标类召回了却没有进入上下文”。</p>
-<p>按“现象 → 证据 → 问题在哪一层 → 修改了什么 → 如何复验”讲。</p>
-`,
-      },
-      {
-        id: 'Q54',
-        title: '中国移动网络拓扑 vs 江中场景定位',
-        body: `
-<p>中国移动：网络资源拓扑，重点是 3D/2D 布局、线路关系和聚合下钻。</p>
-<p>江中：对话式业务助手，场景定位只是其中一环，重点是 <strong>分类 → 规划 → 执行</strong>、工具、审批和回执。</p>
-<p>两者都用 ThingJS，但一个以拓扑为主体，一个以对话和业务办理为主体。</p>
-`,
-      },
-      {
-        id: 'Q55',
-        title: '你更像前端还是 AI 应用工程师？',
-        body: `
-<p>我的底子是前端，但最近两个项目是端到端交付：Vue 3 对话前端、Express 服务端、智能体编排、检索与评测。</p>
-<p>所以更像<strong>偏前端的 AI 应用工程师</strong>：能把模型能力接进业务，也能把交互、流式、审批和恢复做完整。</p>
+<p><strong>简要回答</strong></p>
+<p>核心原因是 <strong>WebSocket 基于 TCP，而 TCP 的可靠性设计在实时语音场景里反而是负担</strong>。</p>
+<p>语音可以容忍丢包，但绝对不能容忍延迟；一旦网络抖动丢了包，TCP 强制等重传，后续所有音频都得跟着等，延迟一堆积通话就卡。</p>
+<div class="interview-bank-doc__table-wrap">
+<table class="interview-bank-doc__table">
+<thead>
+<tr><th>维度</th><th>WebSocket</th><th>WebRTC</th></tr>
+</thead>
+<tbody>
+<tr><td>传输层</td><td>TCP</td><td>UDP</td></tr>
+<tr><td>丢包处理</td><td>强制重传，后续数据一起等</td><td>丢包不等重传，直接用插值算法填补</td></tr>
+<tr><td>延迟表现</td><td>网络抖动时延迟堆积</td><td>用一点音质损失换稳定低延迟，能控制在 50 到 150 毫秒</td></tr>
+<tr><td>内置能力</td><td>都要自己实现</td><td>内置回声消除、噪声抑制、自适应码率等语音处理</td></tr>
+</tbody>
+</table>
+</div>
+<p>所以 OpenAI Realtime API 这类实时语音产品选 WebRTC，就是因为 TCP 根本撑不住语音场景的延迟要求。</p>
 `,
       },
     ],
@@ -2960,64 +2667,6 @@ await agent.invoke(
 `,
       },
       {
-        id: 'P02',
-        group: 'js',
-        title: 'WebSocket 和 MQTT 有什么区别？',
-        body: `
-<p><strong>WebSocket</strong>：全双工长连接，客户端和服务端都能主动推；适合实时对话、大屏同步、三维控制。</p>
-<p><strong>MQTT</strong>：发布 / 订阅，轻量、省带宽；适合设备到云、海量设备和弱网环境。</p>
-<p><strong>项目里</strong>：大屏和 iPad 同步用 WebSocket；设备状态上报 / 订阅用 MQTT。</p>
-<p><strong>选型</strong>：看是“双向实时交互”还是“设备遥测和发布订阅”。</p>
-`,
-      },
-      {
-        id: 'P64',
-        group: 'js',
-        title: 'WebSocket 和 SSE 通信的区别及局限性？',
-        body: `
-<p><strong>简要回答</strong></p>
-<p>最核心的区别是通信方向：<strong>SSE 是服务端单向推</strong>，客户端只能接收，想发消息只能另起一个 HTTP 请求；<strong>WebSocket 是全双工</strong>，双方都可以随时主动发消息。</p>
-<div class="interview-bank-doc__table-wrap">
-<table class="interview-bank-doc__table">
-<thead>
-<tr><th>维度</th><th>SSE</th><th>WebSocket</th></tr>
-</thead>
-<tbody>
-<tr><td>通信方向</td><td>服务端到客户端单向推送</td><td>全双工，双方随时主动发</td></tr>
-<tr><td>适用场景</td><td>LLM 流式输出：模型一直在推 token、用户只是看</td><td>真正需要双向实时交互，比如用户要在模型说话过程中随时打断</td></tr>
-<tr><td>优点</td><td>轻量、HTTP 原生支持、运维简单；OpenAI 和 Anthropic 的 API 用的都是 SSE</td><td>双向、低延迟</td></tr>
-<tr><td>局限</td><td>HTTP/1.1 下有连接数上限；只支持文本传输</td><td>有状态、横向扩展麻烦；容易被企业代理或防火墙拦住</td></tr>
-</tbody>
-</table>
-</div>
-<p>大多数 LLM 文字对话产品用 SSE 就够了；WebSocket 的复杂性只有在真正需要双向实时交互时（比如随时打断）才值得引入。</p>
-`,
-      },
-      {
-        id: 'P65',
-        group: 'js',
-        title: '为什么要用 WebRTC？它和 WebSocket 在 AI 对话流中的核心差异是什么？',
-        body: `
-<p><strong>简要回答</strong></p>
-<p>核心原因是 <strong>WebSocket 基于 TCP，而 TCP 的可靠性设计在实时语音场景里反而是负担</strong>。</p>
-<p>语音可以容忍丢包，但绝对不能容忍延迟；一旦网络抖动丢了包，TCP 强制等重传，后续所有音频都得跟着等，延迟一堆积通话就卡。</p>
-<div class="interview-bank-doc__table-wrap">
-<table class="interview-bank-doc__table">
-<thead>
-<tr><th>维度</th><th>WebSocket</th><th>WebRTC</th></tr>
-</thead>
-<tbody>
-<tr><td>传输层</td><td>TCP</td><td>UDP</td></tr>
-<tr><td>丢包处理</td><td>强制重传，后续数据一起等</td><td>丢包不等重传，直接用插值算法填补</td></tr>
-<tr><td>延迟表现</td><td>网络抖动时延迟堆积</td><td>用一点音质损失换稳定低延迟，能控制在 50 到 150 毫秒</td></tr>
-<tr><td>内置能力</td><td>都要自己实现</td><td>内置回声消除、噪声抑制、自适应码率等语音处理</td></tr>
-</tbody>
-</table>
-</div>
-<p>所以 OpenAI Realtime API 这类实时语音产品选 WebRTC，就是因为 TCP 根本撑不住语音场景的延迟要求。</p>
-`,
-      },
-      {
         id: 'P66',
         group: 'llm-eng',
         title: '有没有用过大模型的网关框架？网关层解决了什么问题？',
@@ -3167,21 +2816,10 @@ export const predictedGroups = [
     title: 'AI 编程面试',
     description: '用大模型写代码、验证与工程约束。',
   },
-  {
-    id: 'predicted-js',
-    group: 'js',
-    title: 'JavaScript 面试',
-    description: 'JS 基础与前端通信。',
-  },
 ]
 
 export const categoryOrder = [
-  'project-intro',
   'predicted',
-  'project-architecture',
-  'agent',
-  'resume-keywords',
-  'compare-pressure',
   'frontend',
 ]
 
