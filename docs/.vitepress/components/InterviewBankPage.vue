@@ -3,6 +3,8 @@ import {
   categories,
   categoryOrder,
   predictedGroups,
+  questionAnchor,
+  questionLabel,
   totalQuestions,
 } from '../data/interview-bank.mjs'
 import ZoomableFigure from './ZoomableFigure.vue'
@@ -36,10 +38,6 @@ const blocks = [
   ...predictedCategories.map((category) => ({ type: 'category', category })),
   ...followUpCategories.map((category) => ({ type: 'category', category })),
 ]
-
-function localNumber(index: number) {
-  return `Q${String(index + 1).padStart(2, '0')}`
-}
 </script>
 
 <template>
@@ -159,8 +157,8 @@ function localNumber(index: number) {
           :key="question.id"
           class="interview-bank-doc__question"
         >
-          <h3 :id="`${block.category.id}-${localNumber(index)}`">
-            <span class="interview-bank-doc__num">{{ localNumber(index) }}</span>
+          <h3 :id="questionAnchor(block.category.id, index)">
+            <span class="interview-bank-doc__num">{{ questionLabel(block.category.id, index) }}</span>
             {{ question.title }}
           </h3>
 

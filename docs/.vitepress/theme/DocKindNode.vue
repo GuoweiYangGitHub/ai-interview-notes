@@ -3,7 +3,7 @@ import { computed, ref, watch } from 'vue'
 
 defineOptions({ name: 'DocKindNode' })
 import { useRoute, withBase } from 'vitepress'
-import { itemContains, normalizePath, type SidebarItem } from '../sidebar-abc'
+import { itemContains, itemContainsHash, normalizePath, type SidebarItem } from '../sidebar-abc'
 
 const props = defineProps<{
   item: SidebarItem
@@ -12,11 +12,15 @@ const props = defineProps<{
 
 const route = useRoute()
 const hasChildren = computed(() => (props.item.items?.length ?? 0) > 0)
-const containsActive = computed(() => itemContains(props.item, route.path))
+const containsActive = computed(() =>
+  props.item.hashAware
+    ? itemContainsHash(props.item, route.fullPath)
+    : itemContains(props.item, route.path),
+)
 const open = ref(containsActive.value)
 
 watch(
-  () => route.path,
+  () => route.fullPath,
   () => {
     if (containsActive.value) {
       open.value = true

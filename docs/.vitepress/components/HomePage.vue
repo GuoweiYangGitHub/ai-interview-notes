@@ -55,13 +55,11 @@ const sections = [
         label: '江中智能助手',
         href: '/03-项目实战/02-江中智能助手/面试问题',
       },
-      { label: '项目面试题', href: '/03-项目实战/项目面试题' },
-      { label: '对比与压力问题', href: '/03-项目实战/对比与压力问题' },
       {
         label: '中国移动网络拓扑',
         href: '/03-项目实战/04-中国移动网络拓扑',
       },
-      { label: '跨项目对比', href: '/03-项目实战/03-跨项目对比' },
+      { label: '跨项目对比与压力问题', href: '/03-项目实战/跨项目对比与压力问题' },
     ],
   },
   {
@@ -70,7 +68,7 @@ const sections = [
     summary: 'Agent → RAG → 工具 → 工程 → 前端。',
     href: '/04-面试题库/',
     topics: [
-      { label: '前端与 JavaScript', href: '/04-面试题库/#frontend-Q01' },
+      { label: '前端与 JavaScript', href: '/04-面试题库/#frontend-01' },
     ],
   },
 ]

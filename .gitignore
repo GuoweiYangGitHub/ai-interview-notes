@@ -28,3 +28,4 @@ output/
 modelscope_models/
 
 private/
+badcase/

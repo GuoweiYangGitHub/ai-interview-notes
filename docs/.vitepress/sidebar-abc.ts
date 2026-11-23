@@ -2,16 +2,15 @@ import {
   categories as interviewCategories,
   categoryOrder,
   predictedGroups,
+  questionAnchor,
+  questionLabel,
 } from './data/interview-bank.mjs'
-
-function localNumber(index: number) {
-  return `Q${String(index + 1).padStart(2, '0')}`
-}
+import { projectQaNav } from './data/project-qa-nav.mjs'
 
 function categoryGroup(category: any) {
   const items = category.questions.map((question: any, index: number) => ({
-    text: `${localNumber(index)} ${question.title}`,
-    link: `/04-面试题库/#${category.id}-${localNumber(index)}`,
+    text: `${questionLabel(category.id, index)} ${question.title}`,
+    link: `/04-面试题库/#${questionAnchor(category.id, index)}`,
   }))
   if (!items.length) {
     items.push({
@@ -67,6 +66,7 @@ export type SidebarItem = {
   text: string
   link?: string
   pair?: string
+  hashAware?: boolean
   items?: SidebarItem[]
 }
 
@@ -330,7 +330,7 @@ export const abcSections: Record<string, AbcSection> = {
         items: [
           { text: '架构图', link: `${thingjs}/架构图` },
           { text: '3 分钟演讲稿', link: `${thingjs}/3分钟演讲稿` },
-          { text: '面试问题', link: `${thingjs}/面试问题` },
+          ...projectQaNav.thingjs,
         ],
       },
       {
@@ -338,13 +338,11 @@ export const abcSections: Record<string, AbcSection> = {
         items: [
           { text: '架构图', link: `${jiangzhong}/架构图` },
           { text: '3 分钟演讲稿', link: `${jiangzhong}/3分钟演讲稿` },
-          { text: '面试问题', link: `${jiangzhong}/面试问题` },
+          ...projectQaNav.jiangzhong,
         ],
       },
-      { text: '项目面试题', link: '/03-项目实战/项目面试题' },
-      { text: '对比与压力问题', link: '/03-项目实战/对比与压力问题' },
-      { text: '中国移动网络拓扑', link: '/03-项目实战/04-中国移动网络拓扑' },
-      { text: '跨项目对比', link: '/03-项目实战/03-跨项目对比' },
+      ...projectQaNav.chinaMobile,
+      ...projectQaNav.compare,
     ],
     quiz: [],
   },
@@ -375,6 +373,33 @@ export function itemContains(item: SidebarItem, path: string): boolean {
     return true
   }
   return item.items?.some((child) => itemContains(child, path)) ?? false
+}
+
+export function itemContainsHash(item: SidebarItem, fullPath?: string): boolean {
+  const split = (value?: string) => {
+    const safe = value ?? ''
+    const hashIndex = safe.indexOf('#')
+    return hashIndex === -1
+      ? { path: safe, hash: '' }
+      : {
+          path: safe.slice(0, hashIndex),
+          hash: decodeURIComponent(safe.slice(hashIndex)),
+        }
+  }
+  const route = split(fullPath)
+
+  const visit = (node: SidebarItem): boolean => {
+    if (node.link) {
+      const link = split(node.link)
+      if (normalizePath(link.path) === normalizePath(route.path)) {
+        if (!link.hash) return true
+        if (route.hash && link.hash === route.hash) return true
+      }
+    }
+    return node.items?.some(visit) ?? false
+  }
+
+  return visit(item)
 }
 
 export function matchAbcSection(path: string) {
