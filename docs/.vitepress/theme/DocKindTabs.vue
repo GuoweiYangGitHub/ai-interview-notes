@@ -65,7 +65,12 @@ function select(next: Kind) {
 
 <template>
   <div v-if="section" class="doc-kind">
-    <div class="doc-kind-tabs" role="tablist" aria-label="知识点或技术问答">
+    <div
+      v-if="section.quiz.length"
+      class="doc-kind-tabs"
+      role="tablist"
+      aria-label="知识点或面试题"
+    >
       <button
         type="button"
         role="tab"
@@ -84,7 +89,7 @@ function select(next: Kind) {
         :aria-selected="kind === 'quiz'"
         @click="select('quiz')"
       >
-        技术问答
+        面试题
       </button>
     </div>
     <ul class="doc-kind-list">

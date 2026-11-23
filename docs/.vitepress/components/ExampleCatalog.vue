@@ -17,7 +17,7 @@ onMounted(async () => {
 })
 
 function href(id) {
-  return withBase(`/E-代码示例/view#${encodeURIComponent(id)}`)
+  return withBase(`/90-附录/代码示例/view#${encodeURIComponent(id)}`)
 }
 </script>
 

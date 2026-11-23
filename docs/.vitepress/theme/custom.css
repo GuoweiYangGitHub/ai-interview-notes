@@ -758,3 +758,549 @@ html.example-content-full .example-full-btn {
     grid-column: 1 / -1;
   }
 }
+
+.project-figure {
+  margin: 20px 0;
+  padding: 12px;
+  overflow: auto;
+  background: #fff;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 10px;
+}
+
+.project-figure img {
+  display: block;
+  width: 100%;
+  min-width: 720px;
+  height: auto;
+}
+
+.project-figure figcaption {
+  margin-top: 10px;
+  color: var(--vp-c-text-2);
+  font-size: 13px;
+  text-align: center;
+}
+
+.project-figure--compact img {
+  min-width: 560px;
+}
+
+.project-figure--wide img {
+  min-width: 1600px;
+}
+
+@media (max-width: 1200px) {
+  .project-figure--wide img {
+    min-width: 1200px;
+  }
+}
+
+@media (max-width: 720px) {
+  .project-figure img {
+    min-width: 560px;
+  }
+}
+
+.zoomable-figure {
+  margin: 20px 0;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 10px;
+}
+
+.zoomable-figure__toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  padding: 8px 10px;
+  background: var(--vp-c-bg-soft);
+  border-bottom: 1px solid var(--vp-c-divider);
+}
+
+.zoomable-figure__toolbar button,
+.zoomable-figure__toolbar a {
+  padding: 4px 10px;
+  color: var(--vp-c-text-1);
+  font-size: 13px;
+  font-weight: 500;
+  background: var(--vp-c-bg);
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 6px;
+}
+
+.zoomable-figure__toolbar button:hover,
+.zoomable-figure__toolbar a:hover {
+  color: var(--vp-c-brand-1);
+  border-color: var(--vp-c-brand-1);
+}
+
+.zoomable-figure__scale {
+  min-width: 48px;
+  color: var(--vp-c-text-2);
+  font-size: 13px;
+  font-variant-numeric: tabular-nums;
+  text-align: center;
+}
+
+.zoomable-figure__viewport {
+  max-height: 80vh;
+  overflow: auto;
+  cursor: grab;
+  touch-action: none;
+  user-select: none;
+  background: #fff;
+  overscroll-behavior: contain;
+}
+
+.zoomable-figure__viewport.is-dragging {
+  cursor: grabbing;
+}
+
+.zoomable-figure__viewport img {
+  display: block;
+  max-width: none;
+  height: auto;
+  margin: 0 auto;
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.zoomable-figure__hint {
+  color: var(--vp-c-text-3);
+  font-size: 12px;
+}
+
+.question-bank-page .VPDoc:not(.has-sidebar) .container {
+  max-width: none !important;
+  justify-content: flex-start;
+}
+
+.question-bank-page .VPDoc:not(.has-sidebar) .content {
+  max-width: none !important;
+}
+
+.question-bank-page .VPDoc .content-container {
+  max-width: none !important;
+}
+
+.interview-bank-doc__summary {
+  margin: 0 0 8px;
+  color: var(--vp-c-text-2);
+  font-size: 14px;
+}
+
+.interview-bank-doc__keywords {
+  padding: 16px 0 20px;
+  margin: 20px 0 8px;
+  border-top: 1px solid var(--vp-c-divider);
+  border-bottom: 1px solid var(--vp-c-divider);
+}
+
+.interview-bank-doc__keywords h2 {
+  margin: 0 0 6px;
+  font-size: 22px;
+}
+
+.interview-bank-doc__keywords-lead {
+  margin: 0 0 12px;
+  color: var(--vp-c-text-2);
+  font-size: 14px;
+}
+
+.interview-bank-doc__keywords-table-wrap {
+  overflow-x: auto;
+}
+
+.interview-bank-doc__keywords-table {
+  width: 100%;
+  font-size: 14px;
+  border-collapse: collapse;
+}
+
+.interview-bank-doc__keywords-table th,
+.interview-bank-doc__keywords-table td {
+  padding: 9px 12px;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid var(--vp-c-divider);
+}
+
+.interview-bank-doc__keywords-table th {
+  color: var(--vp-c-text-1);
+  font-size: 13px;
+  font-weight: 700;
+  background: var(--vp-c-bg-soft);
+}
+
+.interview-bank-doc__keywords-table td:first-child {
+  width: 180px;
+  color: var(--vp-c-brand-1);
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.interview-bank-doc__keywords-table td:last-child {
+  color: var(--vp-c-text-2);
+  line-height: 1.65;
+}
+
+.interview-bank-doc__keywords-table tr:last-child td {
+  border-bottom: 0;
+}
+
+@media (max-width: 720px) {
+  .interview-bank-doc__keywords-table td:first-child {
+    width: auto;
+    white-space: normal;
+  }
+}
+
+.interview-bank-doc__section {
+  padding-bottom: 8px;
+  margin-top: 52px;
+  border-bottom: 1px solid var(--vp-c-divider);
+}
+
+.interview-bank-doc__section h2 {
+  margin: 0 0 6px;
+  font-size: 26px;
+}
+
+.interview-bank-doc__section p {
+  margin: 0 0 10px;
+  color: var(--vp-c-text-2);
+  font-size: 14px;
+}
+
+.interview-bank-doc__category {
+  margin-top: 44px;
+}
+
+.interview-bank-doc__category > h2 {
+  padding-bottom: 8px;
+  margin-bottom: 8px;
+  font-size: 24px;
+  border-bottom: 1px solid var(--vp-c-divider);
+}
+
+.interview-bank-doc__category-lead {
+  margin: -2px 0 8px;
+  color: var(--vp-c-text-2);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.interview-bank-doc__empty {
+  margin: 8px 0;
+  color: var(--vp-c-text-3);
+  font-size: 13px;
+}
+
+.interview-bank-doc__table-wrap {
+  margin: 8px 0 14px;
+  overflow-x: auto;
+}
+
+.interview-bank-doc__table {
+  width: 100%;
+  font-size: 14px;
+  border-collapse: collapse;
+}
+
+.interview-bank-doc__table th,
+.interview-bank-doc__table td {
+  padding: 8px 10px;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid var(--vp-c-divider);
+}
+
+.interview-bank-doc__table th {
+  color: var(--vp-c-text-1);
+  font-size: 13px;
+  font-weight: 700;
+  background: var(--vp-c-bg-soft);
+}
+
+.interview-bank-doc__table td:first-child {
+  width: 210px;
+  color: var(--vp-c-brand-1);
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.interview-bank-doc__table-row--used td:first-child {
+  color: var(--vp-c-danger-1);
+}
+
+.interview-bank-doc__table tr:last-child td {
+  border-bottom: 0;
+}
+
+@media (max-width: 720px) {
+  .interview-bank-doc__table td:first-child {
+    width: auto;
+    white-space: normal;
+  }
+}
+
+.interview-bank-doc__question {
+  padding-top: 22px;
+  margin-top: 22px;
+  border-top: 1px solid var(--vp-c-divider);
+}
+
+.interview-bank-doc__category > h2 + .interview-bank-doc__question {
+  padding-top: 0;
+  margin-top: 8px;
+  border-top: 0;
+}
+
+.interview-bank-doc__question h3 {
+  display: flex;
+  gap: 10px;
+  align-items: baseline;
+  margin: 0 0 12px;
+  font-size: 20px;
+  line-height: 1.4;
+}
+
+.interview-bank-doc__num {
+  flex: none;
+  color: var(--vp-c-brand-1);
+  font-size: 13px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.interview-bank-doc__body :first-child {
+  margin-top: 0;
+}
+
+.interview-bank-doc__body p,
+.interview-bank-doc__body li {
+  line-height: 1.75;
+}
+
+.interview-bank {
+  margin-top: 16px;
+}
+
+.interview-bank__top {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.interview-bank__summary {
+  margin: 0;
+  color: var(--vp-c-text-2);
+  font-size: 14px;
+}
+
+.interview-bank__search {
+  flex: 1;
+  min-width: 220px;
+}
+
+.interview-bank__search input {
+  width: 100%;
+  padding: 9px 12px;
+  color: var(--vp-c-text-1);
+  font: inherit;
+  background: var(--vp-c-bg-soft);
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 8px;
+}
+
+.interview-bank__workspace {
+  display: grid;
+  grid-template-columns: 320px minmax(0, 1fr);
+  gap: 0;
+  align-items: start;
+}
+
+.interview-bank__nav {
+  position: sticky;
+  top: calc(var(--vp-nav-height) + 16px);
+  max-height: calc(100vh - var(--vp-nav-height) - 32px);
+  padding: 0 16px 0 0;
+  overflow: auto;
+  background: transparent;
+  border: 0;
+  border-right: 1px solid var(--vp-c-divider);
+  border-radius: 0;
+}
+
+.interview-bank__category + .interview-bank__category {
+  margin-top: 6px;
+}
+
+.interview-bank__category-button {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px 12px;
+  color: var(--vp-c-text-1);
+  font: inherit;
+  font-weight: 700;
+  text-align: left;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  border-radius: 8px;
+}
+
+.interview-bank__category-button:hover {
+  background: var(--vp-c-default-soft);
+}
+
+.interview-bank__category-button em {
+  flex: none;
+  color: var(--vp-c-text-3);
+  font-size: 12px;
+  font-style: normal;
+}
+
+.interview-bank__list {
+  padding: 0 0 0 4px;
+  margin: 2px 0 6px;
+  list-style: none;
+}
+
+.interview-bank__question {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  width: 100%;
+  padding: 8px 10px;
+  color: var(--vp-c-text-2);
+  font: inherit;
+  font-size: 13px;
+  line-height: 1.5;
+  text-align: left;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  border-radius: 7px;
+}
+
+.interview-bank__question:hover {
+  color: var(--vp-c-text-1);
+  background: var(--vp-c-default-soft);
+}
+
+.interview-bank__question.active {
+  color: var(--vp-c-brand-1);
+  font-weight: 600;
+  background: var(--vp-c-brand-soft);
+}
+
+.interview-bank__num {
+  flex: none;
+  color: var(--vp-c-brand-1);
+  font-size: 12px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.interview-bank__reader {
+  min-width: 0;
+  padding: 0 0 64px 28px;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+}
+
+.interview-bank__meta {
+  margin: 0 0 6px;
+  color: var(--vp-c-text-3);
+  font-size: 12px;
+  letter-spacing: 0.02em;
+}
+
+.interview-bank__title {
+  margin: 0 0 16px;
+  font-size: clamp(22px, 3vw, 30px);
+  line-height: 1.35;
+}
+
+.interview-bank__title .interview-bank__num {
+  margin-right: 10px;
+  font-size: 0.7em;
+  vertical-align: 0.1em;
+}
+
+.interview-bank__body :first-child {
+  margin-top: 0;
+}
+
+.interview-bank__body p,
+.interview-bank__body li {
+  line-height: 1.75;
+}
+
+.interview-bank__pager {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding-top: 14px;
+  margin-top: 24px;
+  border-top: 1px solid var(--vp-c-divider);
+}
+
+.interview-bank__pager button {
+  padding: 7px 12px;
+  color: var(--vp-c-text-1);
+  font: inherit;
+  font-size: 13px;
+  cursor: pointer;
+  background: var(--vp-c-bg);
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 7px;
+}
+
+.interview-bank__pager button:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+
+.interview-bank__empty {
+  padding: 12px;
+  color: var(--vp-c-text-2);
+  font-size: 13px;
+}
+
+@media (max-width: 960px) {
+  .interview-bank__workspace {
+    grid-template-columns: 1fr;
+  }
+
+  .interview-bank__nav {
+    position: static;
+    max-height: 42vh;
+    padding: 0 0 12px;
+    border-right: 0;
+    border-bottom: 1px solid var(--vp-c-divider);
+  }
+
+  .interview-bank__reader {
+    padding: 16px 0 48px;
+  }
+}
+
+.zoomable-figure figcaption {
+  padding: 10px 12px;
+  color: var(--vp-c-text-2);
+  font-size: 13px;
+  text-align: center;
+}

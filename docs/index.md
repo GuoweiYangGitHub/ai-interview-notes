@@ -1,7 +1,7 @@
 ---
 layout: home
 title: 首页
-description: 面向 AI 应用开发工程师的开源笔记，按学习路线、技术专题和代码示例查阅。
+description: 面向 AI 应用开发（偏前端）岗位的笔记，按专题、项目实战和面试题库查阅。
 ---
 
 <HomePage />

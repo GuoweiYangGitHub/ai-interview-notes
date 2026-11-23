@@ -7,7 +7,8 @@ import CapabilityMap from '../components/CapabilityMap.vue'
 import HomePage from '../components/HomePage.vue'
 import TopicLanding from '../components/TopicLanding.vue'
 import FrameworkCatalog from '../components/FrameworkCatalog.vue'
-import CoreCapabilityCatalog from '../components/CoreCapabilityCatalog.vue'
+import ZoomableFigure from '../components/ZoomableFigure.vue'
+import InterviewBankPage from '../components/InterviewBankPage.vue'
 import MermaidDiagram from './MermaidDiagram.vue'
 import DocKindTabs from './DocKindTabs.vue'
 import './custom.css'
@@ -27,7 +28,8 @@ export default {
     app.component('HomePage', HomePage)
     app.component('TopicLanding', TopicLanding)
     app.component('FrameworkCatalog', FrameworkCatalog)
-    app.component('CoreCapabilityCatalog', CoreCapabilityCatalog)
+    app.component('ZoomableFigure', ZoomableFigure)
+    app.component('InterviewBankPage', InterviewBankPage)
     app.component('MermaidDiagram', MermaidDiagram)
   },
 } satisfies Theme

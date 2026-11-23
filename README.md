@@ -1,24 +1,54 @@
-# Agent 系统化笔记
+# AI 应用开发笔记（偏前端）
 
-独立 VitePress 站点：A / B / C 专题、AI 架构面试题、核心能力、代码示例、语法对照。课程练习与可运行示例只留在仓库里，不对外发布。
+独立 VitePress 站点，面向 **AI 应用开发（偏前端）** 岗位的复习资料。
 
-- 文档入口：`docs/`
-- 主线示例：`examples/`
-- 框架与平台案例：`cookbook/`
-- MCP 工具示例：`mcp-tools/`
+## 内容结构
+
+| 目录 | 内容 |
+| --- | --- |
+| `docs/01-前端基础/` | JS/TS、CSS、浏览器与网络、Vue/React、工程化、手写题、小程序（精选） |
+| `docs/02-AI应用开发/` | Prompt、RAG、Agent/MCP、框架、平台、工程交付、部署推理、模型基础 |
+| `docs/03-项目实战/` | 项目架构图、THINGJS 文档 RAG、江中智能助手、中国移动网络拓扑、跨项目对比 |
+| `docs/04-面试题库/` | 项目 3 分钟简介、Agent 重点问题、简历关键词、前端内容 |
+| `docs/90-附录/` | 语法对照、代码示例、常用正则 |
+
+## 内容取舍
+
+主站只保留与 AI 应用/前端面试直接相关的高频内容：
+
+- 学习路线、简历主线、学习计划：已归档，不发布。
+- 2019–2022 历年真题：已归档，不发布。
+- 小程序的常见问题、扫码、兼容性、Taro：已归档；主站保留基础知识和面试题。
+- Git、npm、macOS、Nginx、服务器配置：已归档，不发布。
+
+归档位置：`docs/superpowers/archive/`，不参与构建；需要时可以恢复。
+
+## 本地开发
 
 ```bash
 npm install
 npm run docs:dev
 ```
 
-需要模型服务的示例请先复制 `.env.example` 为 `.env` 并填写已有配置。
-
-本地打包（和 Vercel 同一条命令）：
+## 构建
 
 ```bash
 npm run docs:build
 npm run docs:preview
 ```
 
-产物在 `docs/.vitepress/dist`。构建前会同步核心能力目录并校验内链。Vercel 导入仓库后会读根目录 `vercel.json`：安装 `npm ci`，构建 `npm run docs:build`，发布该目录。Node 需要 20+。不要在 Vercel 里打开 HTML Auto Minify。
+构建前会校验内链；产物在 `docs/.vitepress/dist`。
+
+## 仓库其他内容
+
+- `examples/`：主线可运行示例
+- `cookbook/`：框架与平台案例
+- `mcp-tools/`：MCP 工具示例
+- `课程练习/`：课程练习，不对外发布
+- `docs/superpowers/`：设计文档与迁移计划，不对外发布
+
+需要模型服务的示例请先复制 `.env.example` 为 `.env` 并填写配置。
+
+## 旧链接
+
+`A-应用开发`、`B-工程落地`、`C-模型能力`、`D-AI架构`、`核心能力`、`语法对照`、`E-代码示例` 的旧路径已在 `vercel.json` 配置 301 重定向；`技术问答` 旧路径也重定向到 `面试题`。

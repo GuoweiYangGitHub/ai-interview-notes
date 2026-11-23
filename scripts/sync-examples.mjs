@@ -422,7 +422,7 @@ writeFileSync(
 )
 
 const sidebar = [
-  { text: '代码示例', link: '/E-代码示例/' },
+  { text: '代码示例', link: '/90-附录/代码示例/' },
   ...groups.map((lang) => ({
     text: lang.title,
     collapsed: Boolean(lang.collapsed),
@@ -431,7 +431,7 @@ const sidebar = [
       collapsed: lang.id !== 'node' || topic.id !== 'agent-basics',
       items: topic.examples.map((example) => ({
         text: example.title,
-        link: `/E-代码示例/view#${encodeURIComponent(example.id)}`,
+        link: `/90-附录/代码示例/view#${encodeURIComponent(example.id)}`,
       })),
     })),
   })),

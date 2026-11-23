@@ -10,7 +10,12 @@ async function files(dir) {
   const entries = await readdir(dir, { withFileTypes: true })
   const result = []
   for (const entry of entries) {
-    if (entry.name === '.vitepress' || entry.name === 'public') continue
+    if (
+      entry.name === '.vitepress' ||
+      entry.name === 'public' ||
+      entry.name === 'superpowers'
+    )
+      continue
     const path = join(dir, entry.name)
     if (entry.isDirectory()) result.push(...await files(path))
     else if (entry.isFile() && entry.name.endsWith('.md')) result.push(path)
@@ -24,13 +29,20 @@ async function exists(path) {
 
 for (const file of await files(docsDir)) {
   const source = await readFile(file, 'utf8')
-  for (const match of source.matchAll(/!?\[[^\]]*\]\((<[^>]+>|[^)]+)\)/g)) {
+  const withoutCode = source
+    .replace(/```[\s\S]*?```/g, '')
+    .replace(/~~~[\s\S]*?~~~/g, '')
+    .replace(/`[^`\n]*`/g, '')
+  for (const match of withoutCode.matchAll(/!?\[[^\]]*\]\((<[^>]+>|[^)]+)\)/g)) {
     let target = match[1].trim().replace(/^<|>$/g, '')
     if (!target || /^(https?:|mailto:|#)/.test(target)) continue
     target = decodeURIComponent(target.split('#')[0].split('?')[0])
     if (!target) continue
     const absolute = normalize(target.startsWith('/') ? join(docsDir, target) : join(dirname(file), target))
     const candidates = [absolute, `${absolute}.md`, join(absolute, 'index.md')]
+    if (target.startsWith('/')) {
+      candidates.push(join(docsDir, 'public', target))
+    }
     if (!(await Promise.all(candidates.map(exists))).some(Boolean)) {
       errors.push(`${relative(docsDir, file).replaceAll('\\', '/')}: ${target}`)
     }

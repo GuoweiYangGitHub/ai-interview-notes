@@ -5,6 +5,73 @@
   "buildCommand": "npm run docs:build",
   "outputDirectory": "docs/.vitepress/dist",
   "cleanUrls": true,
+  "redirects": [
+    {
+      "source": "/A-应用开发/:path*",
+      "destination": "/02-AI应用开发/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/B-工程落地/01-应用服务与交付/:path*",
+      "destination": "/02-AI应用开发/06-工程与交付/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/B-工程落地/06-推理部署与优化/:path*",
+      "destination": "/02-AI应用开发/07-部署与推理/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/B-工程落地/:path*",
+      "destination": "/02-AI应用开发/",
+      "permanent": true
+    },
+    {
+      "source": "/C-模型能力/07-神经网络与视觉/:path*",
+      "destination": "/02-AI应用开发/08-模型基础与选型/01-神经网络与视觉/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/C-模型能力/08-HuggingFace/:path*",
+      "destination": "/02-AI应用开发/08-模型基础与选型/02-HuggingFace/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/C-模型能力/09-微调与蒸馏/:path*",
+      "destination": "/02-AI应用开发/08-模型基础与选型/03-微调与蒸馏/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/C-模型能力/:path*",
+      "destination": "/02-AI应用开发/",
+      "permanent": true
+    },
+    {
+      "source": "/02-AI应用开发/06-工程与交付/技术问答",
+      "destination": "/02-AI应用开发/06-工程与交付/面试题",
+      "permanent": true
+    },
+    {
+      "source": "/D-AI架构/:path*",
+      "destination": "/04-面试题库/",
+      "permanent": true
+    },
+    {
+      "source": "/核心能力/:path*",
+      "destination": "/04-面试题库/重点清单",
+      "permanent": true
+    },
+    {
+      "source": "/语法对照/:path*",
+      "destination": "/90-附录/语法对照/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/E-代码示例/:path*",
+      "destination": "/90-附录/代码示例/:path*",
+      "permanent": true
+    }
+  ],
   "headers": [
     {
       "source": "/assets/(.*)",

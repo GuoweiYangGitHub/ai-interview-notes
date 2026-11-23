@@ -26,3 +26,5 @@ ralph_output/
 runs/
 output/
 modelscope_models/
+
+private/
