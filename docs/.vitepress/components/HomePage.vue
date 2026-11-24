@@ -48,12 +48,12 @@ const sections = [
     href: '/03-项目实战/',
     topics: [
       {
-        label: 'THINGJS 文档 RAG',
-        href: '/03-项目实战/01-THINGJS文档RAG/面试问题',
-      },
-      {
         label: '江中智能助手',
         href: '/03-项目实战/02-江中智能助手/面试问题',
+      },
+      {
+        label: 'THINGJS 文档 RAG',
+        href: '/03-项目实战/01-THINGJS文档RAG/面试问题',
       },
       {
         label: '中国移动网络拓扑',

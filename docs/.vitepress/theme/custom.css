@@ -1081,6 +1081,18 @@ html.example-content-full .example-full-btn {
   margin-top: 0;
 }
 
+/* 题库数据里的代码块没有 VitePress 的外层容器，单独兜住横向滚动 */
+.vp-doc pre {
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.vp-doc pre > code {
+  display: block;
+  min-width: max-content;
+}
+
 .interview-bank-doc__body p,
 .interview-bank-doc__body li {
   line-height: 1.75;

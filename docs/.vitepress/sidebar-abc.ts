@@ -326,19 +326,19 @@ export const abcSections: Record<string, AbcSection> = {
     home: { text: '项目实战', link: '/03-项目实战/' },
     notes: [
       {
-        text: 'THINGJS 文档 RAG',
-        items: [
-          { text: '架构图', link: `${thingjs}/架构图` },
-          { text: '3 分钟演讲稿', link: `${thingjs}/3分钟演讲稿` },
-          ...projectQaNav.thingjs,
-        ],
-      },
-      {
         text: '江中智能助手',
         items: [
           { text: '架构图', link: `${jiangzhong}/架构图` },
           { text: '3 分钟演讲稿', link: `${jiangzhong}/3分钟演讲稿` },
           ...projectQaNav.jiangzhong,
+        ],
+      },
+      {
+        text: 'THINGJS 文档 RAG',
+        items: [
+          { text: '架构图', link: `${thingjs}/架构图` },
+          { text: '3 分钟演讲稿', link: `${thingjs}/3分钟演讲稿` },
+          ...projectQaNav.thingjs,
         ],
       },
       ...projectQaNav.chinaMobile,
