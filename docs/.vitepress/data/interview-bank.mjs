@@ -1,26 +1,3 @@
-export const categoryPrefixes = {
-  frontend: 'FE',
-  'predicted-agent': 'AG',
-  'predicted-rag': 'RA',
-  'predicted-tools': 'TL',
-  'predicted-llm-eng': 'LM',
-  'predicted-langchain': 'LC',
-  'predicted-ai-coding': 'AC',
-  'project-intro': 'IN',
-}
-
-export function categoryPrefix(categoryId) {
-  return categoryPrefixes[categoryId] ?? categoryId.toUpperCase()
-}
-
-export function questionLabel(categoryId, index) {
-  return `${categoryPrefix(categoryId)}-${String(index + 1).padStart(2, '0')}`
-}
-
-export function questionAnchor(categoryId, index) {
-  return `${categoryId}-${String(index + 1).padStart(2, '0')}`
-}
-
 export const categories = [
   {
     id: 'frontend',
@@ -2831,3 +2808,313 @@ export const totalQuestions = categories.reduce(
   (sum, category) => sum + category.questions.length,
   0,
 )
+
+// ---------------------------------------------------------------------------
+// 知识模块：8 个一级模块，下面是二级分组，题目按二级分组顺序展示。
+// 每道题在且只在一个二级分组里；topicTags / frameworkTags 只做聚合，不改变归属。
+// ---------------------------------------------------------------------------
+
+export const modules = [
+  {
+    id: 'agent',
+    title: 'Agent 与工作流',
+    prefix: 'AG',
+    submodules: [
+      {
+        id: 'agent-basics',
+        title: '基础与范式',
+        questions: ['P03','P04','P05','P06','P19','P25','P26','P27','P30','P125','P128','P137','P138','P140','P145'],
+      },
+      {
+        id: 'agent-frameworks',
+        title: '框架与选型',
+        questions: ['P96','P97','P98','P99','P102','P103','P104','P105','P106','P13','P133'],
+      },
+      {
+        id: 'agent-planning',
+        title: '规划与状态',
+        questions: ['P107','P121','P152','P14','P15','P18','P20','P23','P120','P130','P143','P146'],
+      },
+      {
+        id: 'agent-memory',
+        title: '记忆与上下文',
+        questions: ['P08','P09','P12','P101','P132'],
+      },
+      {
+        id: 'agent-multi',
+        title: '多 Agent 与人审',
+        questions: ['P10','P11','P16','P22','P28','P147','P148'],
+      },
+    ],
+  },
+  {
+    id: 'rag',
+    title: 'RAG 与知识库',
+    prefix: 'RA',
+    submodules: [
+      {
+        id: 'rag-basics',
+        title: '基础与流程',
+        questions: ['P31','P32','P33','P40','P44','P45','P48','P50','P52','P53'],
+      },
+      {
+        id: 'rag-indexing',
+        title: '切片与索引',
+        questions: ['P34','P35','P36','P37','P38','P39','P49','P151','P153','P159'],
+      },
+      {
+        id: 'rag-retrieval',
+        title: '召回与融合',
+        questions: ['P41','P42','P43','P46','P123','P150','P156','P157','P158','P160'],
+      },
+      {
+        id: 'rag-generation',
+        title: '生成、引用与拒答',
+        questions: ['P47','P51','P154','P155'],
+      },
+    ],
+  },
+  {
+    id: 'tools',
+    title: '工具调用与协议',
+    prefix: 'TL',
+    submodules: [
+      {
+        id: 'tools-protocol',
+        title: 'Function Calling / MCP / Skill',
+        questions: ['P54','P01','P55','P56','P57','P58','P59','P60','P61','P62','P63','P70','P72','P100','P144'],
+      },
+      {
+        id: 'tools-routing',
+        title: '工具路由与 Schema',
+        questions: ['P67','P69','P131','P134','P24'],
+      },
+      {
+        id: 'tools-reliability',
+        title: '失败、超时与重试',
+        questions: ['P68','P124','P127','P135'],
+      },
+    ],
+  },
+  {
+    id: 'prompt',
+    title: 'Prompt 与上下文工程',
+    prefix: 'PR',
+    submodules: [
+      {
+        id: 'prompt-techniques',
+        title: 'Prompt 技巧',
+        questions: ['P88','P89','P141'],
+      },
+      {
+        id: 'prompt-context',
+        title: '上下文工程',
+        questions: ['P17','P29','P95'],
+      },
+    ],
+  },
+  {
+    id: 'engineering',
+    title: '工程与交付',
+    prefix: 'EN',
+    submodules: [
+      {
+        id: 'eng-concurrency',
+        title: '并发与稳定性',
+        questions: ['P66','P136','P149'],
+      },
+      {
+        id: 'eng-observability',
+        title: '可观测性',
+        questions: ['P21','P139'],
+      },
+      {
+        id: 'eng-streaming',
+        title: '流式交付',
+        questions: ['P122'],
+      },
+      {
+        id: 'eng-release',
+        title: '质量门禁与发布',
+        questions: ['P93'],
+      },
+    ],
+  },
+  {
+    id: 'model',
+    title: '模型原理',
+    prefix: 'MD',
+    submodules: [
+      {
+        id: 'model-selection',
+        title: '模型选型与能力',
+        questions: ['P90','P91','P94'],
+      },
+      {
+        id: 'model-serving',
+        title: '推理与部署',
+        questions: ['P86','P87','P92'],
+      },
+      {
+        id: 'model-theory',
+        title: '原理与训练',
+        questions: ['P73','P74','P75','P76','P77','P78','P79','P80','P81','P82','P83','P84','P85','P126','P129'],
+      },
+    ],
+  },
+  {
+    id: 'frontend',
+    title: '前端与交互',
+    prefix: 'FE',
+    submodules: [
+      {
+        id: 'fe-language',
+        title: '语言与框架',
+        questions: ['Q30','Q31','Q32','Q33','Q34','Q35','Q36','Q44','Q45','Q46','Q49','Q50'],
+      },
+      {
+        id: 'fe-browser',
+        title: '浏览器与性能',
+        questions: ['Q37','Q38','Q39','Q40','Q41','Q42','Q43','Q47','Q48'],
+      },
+      {
+        id: 'fe-streaming',
+        title: '流式与实时通信',
+        questions: ['P02','P64','P65'],
+      },
+    ],
+  },
+  {
+    id: 'ai-coding',
+    title: 'AI 编程与研发效能',
+    prefix: 'AC',
+    submodules: [
+      {
+        id: 'ac-requirements',
+        title: '需求与拆解',
+        questions: ['P108','P109','P110','P111','P116','P117','P118'],
+      },
+      {
+        id: 'ac-review',
+        title: '代码审查与测试',
+        questions: ['P112','P113','P114','P115'],
+      },
+      {
+        id: 'ac-sandbox',
+        title: '沙箱与权限',
+        questions: ['P71','P119','P142'],
+      },
+    ],
+  },
+]
+
+export const topics = [
+  {
+    id: 'evaluation',
+    title: '评测与质量',
+    description: '按标签聚合各模块的评测题；题目本身仍归属各自的知识模块。',
+  },
+]
+
+export const topicTags = {
+  evaluation: ['P19','P23','P48','P93','P125','P128','P137','P146','P147','P154','P157'],
+}
+
+export const frameworkTags = {
+  langchain: ['P96','P97','P98','P99','P100','P101','P102','P103','P104','P105','P106','P107','P13','P121','P133','P152'],
+  langgraph: ['P104','P105','P152'],
+  llamaindex: ['P102'],
+  mastra: ['P133'],
+}
+
+function pad2(value) {
+  return String(value).padStart(2, '0')
+}
+
+const allQuestions = categories.flatMap((category) => category.questions)
+const questionById = new Map(allQuestions.map((question) => [question.id, question]))
+const metaById = new Map()
+
+for (const module of modules) {
+  for (const submodule of module.submodules) {
+    for (const id of submodule.questions) {
+      if (!questionById.has(id)) throw new Error('题目不存在：' + id)
+      if (metaById.has(id)) throw new Error('题目重复归类：' + id)
+      metaById.set(id, { module: module.id, submodule: submodule.id })
+    }
+  }
+}
+
+for (const question of allQuestions) {
+  const meta = metaById.get(question.id)
+  if (!meta) throw new Error('题目未归类：' + question.id)
+  question.module = meta.module
+  question.submodule = meta.submodule
+  question.topics = Object.keys(topicTags).filter((topic) => topicTags[topic].includes(question.id))
+  question.frameworks = Object.keys(frameworkTags).filter((framework) => frameworkTags[framework].includes(question.id))
+}
+
+const labelById = new Map()
+for (const module of modules) {
+  let number = 0
+  for (const submodule of module.submodules) {
+    for (const id of submodule.questions) {
+      number += 1
+      labelById.set(id, module.prefix + '-' + pad2(number))
+    }
+  }
+}
+
+const legacyAnchorById = new Map()
+for (const category of categories) {
+  if (category.id !== 'frontend') continue
+  category.questions.forEach((question, index) => {
+    legacyAnchorById.set(question.id, 'frontend-' + pad2(index + 1))
+  })
+}
+const predictedCategory = categories.find((category) => category.id === 'predicted')
+for (const group of predictedGroups) {
+  const groupQuestions = predictedCategory.questions.filter(
+    (question) => question.group === group.group,
+  )
+  groupQuestions.forEach((question, index) => {
+    legacyAnchorById.set(question.id, 'predicted-' + group.group + '-' + pad2(index + 1))
+  })
+}
+
+export function questionLabel(question) {
+  return labelById.get(question.id) ?? question.id
+}
+
+export function questionSlug(question) {
+  return question.id.toLowerCase()
+}
+
+export function questionLegacyAnchor(question) {
+  return legacyAnchorById.get(question.id) ?? ''
+}
+
+export function questionsForSubmodule(moduleId, submoduleId) {
+  const module = modules.find((item) => item.id === moduleId)
+  const submodule = module?.submodules.find((item) => item.id === submoduleId)
+  return (submodule?.questions ?? [])
+    .map((id) => questionById.get(id))
+    .filter(Boolean)
+}
+
+export function moduleQuestions(moduleId) {
+  const module = modules.find((item) => item.id === moduleId)
+  return module?.submodules.flatMap((submodule) =>
+    submodule.questions.map((id) => questionById.get(id)).filter(Boolean),
+  ) ?? []
+}
+
+export function topicQuestions(topic) {
+  return (topicTags[topic] ?? [])
+    .map((id) => questionById.get(id))
+    .filter(Boolean)
+}
+
+export function moduleTitle(moduleId) {
+  return modules.find((item) => item.id === moduleId)?.title ?? ''
+}

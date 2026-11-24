@@ -68,7 +68,7 @@ const sections = [
     summary: 'Agent → RAG → 工具 → 工程 → 前端。',
     href: '/04-面试题库/',
     topics: [
-      { label: '前端与 JavaScript', href: '/04-面试题库/#frontend-01' },
+      { label: '前端与 JavaScript', href: '/04-面试题库/#q30' },
     ],
   },
 ]

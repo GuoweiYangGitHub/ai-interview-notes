@@ -1,54 +1,45 @@
 import {
-  categories as interviewCategories,
-  categoryOrder,
-  predictedGroups,
-  questionAnchor,
+  modules,
   questionLabel,
+  questionSlug,
+  questionsForSubmodule,
+  topicQuestions,
 } from './data/interview-bank.mjs'
 import { projectQaNav } from './data/project-qa-nav.mjs'
 
-function categoryGroup(category: any) {
-  const items = category.questions.map((question: any, index: number) => ({
-    text: `${questionLabel(category.id, index)} ${question.title}`,
-    link: `/04-面试题库/#${questionAnchor(category.id, index)}`,
-  }))
-  if (!items.length) {
-    items.push({
-      text: '暂无题目',
-      link: `/04-面试题库/#cat-${category.id}`,
-    })
-  }
+function questionItem(question: any) {
   return {
-    text: category.title,
-    collapsed: false,
-    items,
+    text: `${questionLabel(question)} ${question.title}`,
+    link: `/04-面试题库/#${questionSlug(question)}`,
   }
 }
 
-const orderedCategories = categoryOrder
-  .map((id: string) =>
-    interviewCategories.find((category: any) => category.id === id),
-  )
-  .filter(Boolean)
+function moduleGroup(module: any, index: number) {
+  const submodules = module.submodules
+    .map((submodule: any) => {
+      const questions = questionsForSubmodule(module.id, submodule.id)
+      if (!questions.length) return null
+      return {
+        text: `${submodule.title}（${questions.length}）`,
+        collapsed: true,
+        items: questions.map(questionItem),
+      }
+    })
+    .filter(Boolean)
 
-const introCategories = orderedCategories.filter(
-  (category: any) => category.id === 'project-intro',
-)
-const predictedContainer = orderedCategories.find(
-  (category: any) => category.id === 'predicted',
-)
-const predictedCategories = predictedGroups.map((group: any) => ({
-  id: group.id,
-  title: group.title,
-  questions:
-    predictedContainer?.questions.filter(
-      (question: any) => question.group === group.group,
-    ) ?? [],
-}))
-const followUpCategories = orderedCategories.filter(
-  (category: any) =>
-    category.id !== 'project-intro' && category.id !== 'predicted',
-)
+  const count = submodules.reduce(
+    (sum: number, submodule: any) => sum + submodule.items.length,
+    0,
+  )
+
+  return {
+    text: `${index + 1}. ${module.title}（${count}）`,
+    collapsed: false,
+    items: submodules,
+  }
+}
+
+const evaluationQuestions = topicQuestions('evaluation')
 
 export const interviewBankSidebar = [
   { text: '面试题库', link: '/04-面试题库/' },
@@ -57,9 +48,17 @@ export const interviewBankSidebar = [
     collapsed: false,
     items: [{ text: '关键词速查', link: '/04-面试题库/#keywords' }],
   },
-  ...introCategories.map(categoryGroup),
-  ...predictedCategories.map(categoryGroup),
-  ...followUpCategories.map(categoryGroup),
+  {
+    text: '专题',
+    collapsed: false,
+    items: [
+      {
+        text: `评测与质量（${evaluationQuestions.length}）`,
+        link: '/04-面试题库/#topic-evaluation',
+      },
+    ],
+  },
+  ...modules.map(moduleGroup),
 ]
 
 export type SidebarItem = {

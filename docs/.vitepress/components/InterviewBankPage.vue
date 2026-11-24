@@ -1,49 +1,53 @@
 <script setup lang="ts">
 import {
-  categories,
-  categoryOrder,
-  predictedGroups,
-  questionAnchor,
+  modules,
+  moduleTitle,
   questionLabel,
+  questionLegacyAnchor,
+  questionSlug,
+  questionsForSubmodule,
+  topicQuestions,
   totalQuestions,
 } from '../data/interview-bank.mjs'
 import ZoomableFigure from './ZoomableFigure.vue'
 
-const orderedCategories = categoryOrder
-  .map((id) => categories.find((category) => category.id === id))
-  .filter(Boolean)
+const moduleBlocks = modules.map((module, index) => {
+  const submodules = module.submodules
+    .map((submodule) => ({
+      ...submodule,
+      questions: questionsForSubmodule(module.id, submodule.id),
+    }))
+    .filter((submodule) => submodule.questions.length > 0)
 
-const introCategories = orderedCategories.filter(
-  (category) => category.id === 'project-intro',
-)
-const predictedContainer = orderedCategories.find(
-  (category) => category.id === 'predicted',
-)
-const predictedCategories = predictedGroups.map((group) => ({
-  id: group.id,
-  title: group.title,
-  description: group.description,
-  questions:
-    predictedContainer?.questions.filter(
-      (question) => question.group === group.group,
-    ) ?? [],
-}))
-const followUpCategories = orderedCategories.filter(
-  (category) =>
-    category.id !== 'project-intro' && category.id !== 'predicted',
-)
+  return {
+    ...module,
+    number: index + 1,
+    count: submodules.reduce(
+      (sum, submodule) => sum + submodule.questions.length,
+      0,
+    ),
+    submodules,
+  }
+})
 
-const blocks = [
-  ...introCategories.map((category) => ({ type: 'category', category })),
-  ...predictedCategories.map((category) => ({ type: 'category', category })),
-  ...followUpCategories.map((category) => ({ type: 'category', category })),
-]
+const evaluationQuestions = topicQuestions('evaluation')
+
+const frameworkLabels: Record<string, string> = {
+  langchain: 'LangChain',
+  langgraph: 'LangGraph',
+  llamaindex: 'LlamaIndex',
+  mastra: 'Mastra',
+}
+
+const topicLabels: Record<string, string> = {
+  evaluation: '评测与质量',
+}
 </script>
 
 <template>
   <div class="interview-bank-doc">
     <p class="interview-bank-doc__summary">
-      共 <strong>{{ totalQuestions }}</strong> 题。左侧分类和题号，右侧题目和答案。
+      共 <strong>{{ totalQuestions }}</strong> 题。左侧按 8 个知识模块和二级分组导航，右侧题目和答案；同一道题只归一个主模块。
     </p>
 
     <section id="keywords" class="interview-bank-doc__keywords">
@@ -165,51 +169,90 @@ const blocks = [
       </div>
     </section>
 
-    <template v-for="block in blocks" :key="block.category.id">
-      <section
-        :id="`cat-${block.category.id}`"
-        class="interview-bank-doc__category"
-      >
-        <h2>{{ block.category.title }}</h2>
-        <p
-          v-if="block.category.description"
-          class="interview-bank-doc__category-lead"
-        >
-          {{ block.category.description }}
-        </p>
-        <p
-          v-if="!block.category.questions.length"
-          class="interview-bank-doc__empty"
-        >
-          暂无题目，后续补充。
-        </p>
-
-        <article
-          v-for="(question, index) in block.category.questions"
-          :key="question.id"
-          class="interview-bank-doc__question"
-        >
-          <h3 :id="questionAnchor(block.category.id, index)">
-            <span class="interview-bank-doc__num">{{ questionLabel(block.category.id, index) }}</span>
+    <section id="topic-evaluation" class="interview-bank-doc__topic">
+      <h2>专题：评测与质量</h2>
+      <p class="interview-bank-doc__topic-lead">
+        评测题仍归属各自的知识模块，这里按标签聚合，方便集中复习。
+      </p>
+      <ul class="interview-bank-doc__topic-list">
+        <li v-for="question in evaluationQuestions" :key="question.id">
+          <a :href="`#${questionSlug(question)}`">
+            <span class="interview-bank-doc__num">{{ questionLabel(question) }}</span>
             {{ question.title }}
+          </a>
+          <span class="interview-bank-doc__topic-module">{{ moduleTitle(question.module) }}</span>
+        </li>
+      </ul>
+    </section>
+
+    <template v-for="block in moduleBlocks" :key="block.id">
+      <section
+        :id="`module-${block.id}`"
+        class="interview-bank-doc__module"
+      >
+        <h2>
+          {{ block.number }}. {{ block.title }}
+          <span class="interview-bank-doc__count">{{ block.count }} 题</span>
+        </h2>
+
+        <template v-for="submodule in block.submodules" :key="submodule.id">
+          <h3 :id="`sub-${submodule.id}`" class="interview-bank-doc__submodule">
+            {{ submodule.title }}
+            <span class="interview-bank-doc__count">{{ submodule.questions.length }} 题</span>
           </h3>
 
-          <div class="vp-doc interview-bank-doc__body" v-html="question.body" />
+          <article
+            v-for="question in submodule.questions"
+            :key="question.id"
+            class="interview-bank-doc__question"
+          >
+            <span
+              :id="questionLegacyAnchor(question)"
+              class="interview-bank-doc__legacy-anchor"
+              aria-hidden="true"
+            />
+            <h4 :id="questionSlug(question)">
+              <span class="interview-bank-doc__num">{{ questionLabel(question) }}</span>
+              {{ question.title }}
+            </h4>
 
-          <ZoomableFigure
-            v-if="question.figure === 'jiangzhong'"
-            src="/assets/jiangzhong/architecture.svg"
-            alt="江中智能助手系统架构、智能体运行流程与 LangGraph 主图"
-            caption="江中系统架构、智能体运行流程与 LangGraph 主图；可缩放、可拖拽。"
-          />
-          <ZoomableFigure
-            v-else-if="question.figure === 'thingjs'"
-            src="/assets/thingjs/architecture.webp"
-            alt="THINGJS 文档问答系统架构、索引、检索、生成、评测与发布门禁"
-            caption="THINGJS 系统流程、离线索引、在线检索、评测与发布门禁；可缩放、可拖拽，或打开原图。"
-            original="/assets/thingjs/architecture-large.webp"
-          />
-        </article>
+            <p
+              v-if="question.frameworks?.length || question.topics?.length"
+              class="interview-bank-doc__tags"
+            >
+              <span
+                v-for="framework in question.frameworks"
+                :key="`f-${framework}`"
+                class="interview-bank-doc__tag"
+              >
+                框架：{{ frameworkLabels[framework] ?? framework }}
+              </span>
+              <span
+                v-for="topic in question.topics"
+                :key="`t-${topic}`"
+                class="interview-bank-doc__tag"
+              >
+                专题：{{ topicLabels[topic] ?? topic }}
+              </span>
+            </p>
+
+            <div class="vp-doc interview-bank-doc__body" v-html="question.body" />
+
+            <ZoomableFigure
+              v-if="question.figure === 'jiangzhong'"
+              src="/assets/jiangzhong/architecture.svg"
+              alt="江中智能助手系统架构、智能体运行流程与 LangGraph 主图"
+              caption="江中系统架构、智能体运行流程与 LangGraph 主图；可缩放、可拖拽。"
+            />
+            <ZoomableFigure
+              v-else-if="question.figure === 'thingjs'"
+              src="/assets/thingjs/architecture.webp"
+              alt="THINGJS 文档问答系统架构、索引、检索、生成、评测与发布门禁"
+              caption="THINGJS 系统流程、离线索引、在线检索、评测与发布门禁；可缩放、可拖拽，或打开原图。"
+              original="/assets/thingjs/architecture-large.webp"
+            />
+          </article>
+        </template>
       </section>
     </template>
   </div>
